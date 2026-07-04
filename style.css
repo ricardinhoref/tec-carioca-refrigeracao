@@ -157,9 +157,18 @@ section{
 
 }
 .logo img{
-    width:220px;
+    width:160px;
     height:auto;
     display:block;
-    border:3px solid red;
+}
+
+header{
+    background:#004b8d;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+}
 }
 }
