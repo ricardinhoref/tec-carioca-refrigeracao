@@ -157,20 +157,13 @@ section{
 }
 
 }
+.logo{
+    display:flex;
+    align-items:center;
+}
+
 .logo img{
     width:140px;
     height:auto;
     display:block;
-}
-}
-
-header{
-    background:#004b8d;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 8%;
-}
-}
 }
