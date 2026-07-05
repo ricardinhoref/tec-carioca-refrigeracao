@@ -46,10 +46,10 @@ header{
 }
 
 .banner{
-    background:#004b8d;
+    background:linear-gradient(rgba(0,75,141,0.85), rgba(0,75,141,0.85));
     color:white;
     text-align:center;
-    padding:100px 20px;
+    padding:120px 20px;
 }
 
 .banner h2{
