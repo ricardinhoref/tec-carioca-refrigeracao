@@ -24,90 +24,64 @@ body{
 
 /* CABEÇALHO */
 
+/* ===== CABEÇALHO ===== */
+
 header{
-    width:100%;
-    background:#004b8d;
-    color:#fff;
-
+    background:#003b70;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-
-    padding:15px 40px;
-
+    align-items:center;
+    padding:15px 6%;
     position:sticky;
     top:0;
-
     z-index:1000;
-
-    box-shadow:0 3px 12px rgba(0,0,0,.15);
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
 }
 
-/* LOGO */
+.logo{
+    flex:1;
+}
 
 .logo img{
-    width:120px;
+    width:170px;
     height:auto;
     display:block;
 }
 
-/* NOME DA EMPRESA */
-
-.empresa{
-    flex:1;
-    margin-left:20px;
+nav{
+    flex:2;
 }
-
-.empresa h1{
-    font-size:28px;
-    margin-bottom:5px;
-}
-
-.empresa p{
-    font-size:14px;
-    opacity:.9;
-}
-
-/* MENU */
 
 .menu{
-    list-style:none;
     display:flex;
-    gap:30px;
-}
-
-.menu li{
+    justify-content:center;
+    align-items:center;
     list-style:none;
+    gap:35px;
 }
 
 .menu a{
     color:#fff;
     text-decoration:none;
-    font-weight:bold;
+    font-size:16px;
+    font-weight:600;
     transition:.3s;
 }
 
 .menu a:hover{
-    color:#25D366;
+    color:#4fc3ff;
 }
-
-/* BOTÃO WHATSAPP */
 
 .btn-whatsapp{
     background:#25D366;
     color:#fff;
     text-decoration:none;
-
-    padding:12px 24px;
-
+    padding:12px 22px;
     border-radius:30px;
-
     font-weight:bold;
-
     transition:.3s;
 }
 
 .btn-whatsapp:hover{
-    background:#1ea952;
-    transform:translateY(-2px);
+    transform:scale(1.05);
 }
