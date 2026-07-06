@@ -1,9 +1,6 @@
-/* ===================================
-   TEC Carioca Refrigeração
-   PARTE 1
-=================================== */
-
-/* RESET */
+/* ===========================
+   RESET
+=========================== */
 
 *{
     margin:0;
@@ -16,111 +13,280 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7fa;
-    color:#333;
-    line-height:1.6;
+
+    font-family:'Poppins',sans-serif;
+    background:#ffffff;
+    color:#1f2937;
+    overflow-x:hidden;
+
 }
 
-/* CABEÇALHO */
+/* ===========================
+   CONTAINER
+=========================== */
 
-/* ===== CABEÇALHO ===== */
+.container{
+
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+
+}
+
+/* ===========================
+   MARCA D'ÁGUA
+=========================== */
+
+.marca-dagua{
+
+    position:fixed;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:900px;
+
+    height:900px;
+
+    background:url("imagens/logo.png") center center no-repeat;
+
+    background-size:contain;
+
+    opacity:0.04;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+/* ===========================
+   CABEÇALHO
+=========================== */
 
 header{
-    background:#003b70;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 6%;
-    position:sticky;
+
+    position:absolute;
+
+    width:100%;
+
     top:0;
+
+    left:0;
+
     z-index:1000;
-    box-shadow:0 3px 10px rgba(0,0,0,.2);
+
+    padding:25px 0;
+
 }
 
-.logo{
-    flex:1;
+header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
 }
 
 .logo img{
-    width:170px;
-    height:auto;
-    display:block;
+
+    width:240px;
+
 }
 
-nav{
-    flex:2;
-}
+/* ===========================
+   WHATSAPP
+=========================== */
 
-.menu{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    list-style:none;
-    gap:35px;
-}
+.whatsapp-fixo{
 
-.menu a{
-    color:#fff;
-    text-decoration:none;
-    font-size:16px;
-    font-weight:600;
-    transition:.3s;
-}
+    position:fixed;
 
-.menu a:hover{
-    color:#4fc3ff;
-}
+    right:25px;
 
-.btn-whatsapp{
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
     background:#25D366;
-    color:#fff;
-    text-decoration:none;
-    padding:12px 22px;
-    border-radius:30px;
-    font-weight:bold;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    z-index:9999;
+
     transition:.3s;
+
 }
 
-.btn-whatsapp:hover{
-    transform:scale(1.05);
+.whatsapp-fixo:hover{
+
+    transform:scale(1.1);
+
 }
-/* ===================================
+
+.whatsapp-fixo img{
+
+    width:34px;
+
+}
+
+/* ===========================
    BANNER
-=================================== */
+=========================== */
 
 .banner{
-    background:linear-gradient(rgba(0,59,112,.90),rgba(0,59,112,.90));
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.banner-container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.texto-banner{
+
+    width:50%;
+
+}
+
+.texto-banner span{
+
+    color:#0b6efd;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.texto-banner h1{
+
+    font-size:64px;
+
+    line-height:72px;
+
+    color:#003a70;
+
+    margin:20px 0;
+
+}
+
+.texto-banner p{
+
+    font-size:19px;
+
+    color:#555;
+
+    line-height:34px;
+
+    margin-bottom:35px;
+
+}
+
+.botao-whatsapp{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 42px;
+
+    background:#25D366;
+
     color:#fff;
-    text-align:center;
-    padding:80px 20px;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
 }
 
-.banner-conteudo{
-    max-width:900px;
-    margin:auto;
+.botao-whatsapp:hover{
+
+    transform:translateY(-4px);
+
 }
 
-.banner-logo{
-    width:280px;
-    max-width:90%;
-    margin-bottom:30px;
+.imagem-banner{
+
+    width:50%;
+
+    text-align:right;
+
 }
 
-.banner h1{
-    font-size:46px;
-    margin-bottom:15px;
+.imagem-banner img{
+
+    width:100%;
+
+    max-width:650px;
+
 }
 
-.banner h2{
-    font-size:26px;
-    font-weight:400;
-    margin-bottom:20px;
-}
+/* ===========================
+   ONDA
+=========================== */
 
-.banner p{
-    max-width:700px;
-    margin:auto;
-    font-size:20px;
-    line-height:1.8;
+.onda-inferior{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:140px;
+
+    background:#0b6efd;
+
+    border-radius:100% 100% 0 0;
+
 }
