@@ -290,3 +290,216 @@ header .container{
     border-radius:100% 100% 0 0;
 
 }
+/*==================================
+    QUEM SOMOS
+==================================*/
+
+.quem-somos{
+
+    position:relative;
+    padding:120px 0;
+    background:#ffffff;
+    z-index:2;
+
+}
+
+.titulo-secao{
+
+    text-align:center;
+    margin-bottom:70px;
+
+}
+
+.titulo-secao span{
+
+    color:#0b6efd;
+    font-size:18px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:2px;
+
+}
+
+.titulo-secao h2{
+
+    margin-top:15px;
+    font-size:46px;
+    color:#003a70;
+    font-weight:700;
+
+}
+
+.conteudo-sobre{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:80px;
+
+}
+
+.texto-sobre{
+
+    width:55%;
+
+}
+
+.texto-sobre p{
+
+    font-size:18px;
+    line-height:34px;
+    color:#555;
+    margin-bottom:25px;
+
+}
+
+.imagem-sobre{
+
+    width:45%;
+    text-align:center;
+
+}
+
+.imagem-sobre img{
+
+    width:100%;
+    max-width:520px;
+
+}
+
+/*==================================
+        SERVIÇOS
+==================================*/
+
+.servicos{
+
+    background:#f5f9ff;
+    padding:120px 0;
+
+}
+
+.cards-servicos{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.card-servico{
+
+    background:#ffffff;
+
+    border-radius:25px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.card-servico:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.card-servico img{
+
+    width:85px;
+
+    margin-bottom:25px;
+
+}
+
+.card-servico h3{
+
+    font-size:24px;
+
+    color:#003a70;
+
+    margin-bottom:15px;
+
+}
+
+.card-servico p{
+
+    color:#666;
+
+    line-height:30px;
+
+    font-size:17px;
+
+}
+
+/*==================================
+      DIFERENCIAIS
+==================================*/
+
+.diferenciais{
+
+    padding:120px 0;
+
+    background:#ffffff;
+
+}
+
+.cards-diferenciais{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.card-diferencial{
+
+    background:#ffffff;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    border-left:8px solid #0b6efd;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.card-diferencial:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card-diferencial h3{
+
+    color:#003a70;
+
+    margin-bottom:15px;
+
+    font-size:26px;
+
+}
+
+.card-diferencial p{
+
+    color:#666;
+
+    font-size:17px;
+
+    line-height:30px;
+
+}
