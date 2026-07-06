@@ -760,3 +760,138 @@ footer p{
 }
 
 }
+/*==================================
+      ACABAMENTO FINAL
+==================================*/
+
+section{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+::selection{
+
+    background:#0b6efd;
+
+    color:#fff;
+
+}
+
+/* Barra de rolagem */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f2f5fa;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0b6efd;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#0056c9;
+
+}
+
+/*==================================
+      EFEITOS
+==================================*/
+
+.banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-250px;
+
+    right:-250px;
+
+    width:650px;
+
+    height:650px;
+
+    background:rgba(11,110,253,.05);
+
+    border-radius:50%;
+
+}
+
+.banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-220px;
+
+    left:-220px;
+
+    width:500px;
+
+    height:500px;
+
+    background:rgba(11,110,253,.05);
+
+    border-radius:50%;
+
+}
+
+/*==================================
+      TRANSIÇÕES
+==================================*/
+
+.card-servico,
+.card-diferencial,
+.botao-whatsapp,
+.whatsapp-fixo,
+.logos-marcas img{
+
+    transition:.35s ease;
+
+}
+
+/*==================================
+      FINAL
+==================================*/
+
+body{
+
+    min-width:320px;
+
+}
