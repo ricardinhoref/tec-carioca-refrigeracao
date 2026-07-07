@@ -1,228 +1,385 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TC Carioca Refrigeração</title>
+    <!-- Font Awesome para ícones modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #002349; /* Azul marinho estilo Electrolux */
+            --accent-blue: #0056b3;
+            --whatsapp-green: #25D366;
+            --text-dark: #1a1a1a;
+            --bg-light: #f4f7f6;
+        }
 
-    <title>TEC Carioca Refrigeração</title>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
 
-    <meta name="description"
-        content="Assistência técnica especializada em refrigeração residencial e comercial.">
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        /* Cabeçalho / Menu */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        .logo-area img {
+            height: 45px;
+            width: auto;
+        }
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+        .logo-area span {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            letter-spacing: 0.5px;
+        }
 
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #444;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-blue);
+        }
+
+        .btn-nav {
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .btn-nav:hover {
+            background-color: var(--accent-blue);
+        }
+
+        /* Hero / Destaque Principal */
+        .hero-section {
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            padding: 120px 8%;
+            display: flex;
+            align-items: center;
+            min-height: 550px;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0, 35, 73, 0.95) 40%, rgba(0, 35, 73, 0.4) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            color: #ffffff;
+        }
+
+        .hero-content span {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #00bcd4;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.6rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Serviços */
+        .services-section {
+            padding: 80px 8%;
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .services-section h2 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .services-subtitle {
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 35px 25px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            text-align: left;
+            border-top: 4px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--accent-blue);
+            box-shadow: 0 10px 25px rgba(0, 35, 73, 0.08);
+        }
+
+        .service-card i {
+            font-size: 2rem;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Seção de Chamada (CTA) */
+        .cta-section {
+            padding: 80px 8%;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: #666;
+            margin-bottom: 35px;
+            font-size: 1.1rem;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 16px 35px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+            transform: scale(1.03);
+        }
+
+        /* Ícone Flutuante fixo */
+        .whatsapp-fixed {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-fixed:hover {
+            transform: scale(1.1);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            opacity: 0.95;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Celular */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+            nav ul {
+                display: none;
+            }
+            .hero-section {
+                padding: 80px 5%;
+                text-align: center;
+                min-height: 450px;
+            }
+            .hero-section::before {
+                background: rgba(0, 35, 73, 0.9);
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-    <!-- Marca d'água -->
-
-    <div class="marca-dagua"></div>
-
-    <!-- WhatsApp -->
-
-    <a href="https://wa.me/55SEUNUMERO" class="whatsapp-fixo" target="_blank">
-
-        <img src="imagens/whatsapp.png" alt="WhatsApp">
-
-    </a>
-
     <!-- Cabeçalho -->
-
     <header>
-
-        <div class="container">
-
-            <div class="logo">
-
-                <img src="imagens/logo.png" alt="TEC Carioca Refrigeração">
-
-            </div>
-
+        <div class="logo-area">
+            <img src="logo.png" alt="TC Carioca">
+            <span>TC CARIOCA</span>
         </div>
-
+        <nav>
+            <ul>
+                <li><a href="#sobre">Quem Somos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="https://wa.me/5521968182380" class="btn-nav" target="_blank">Fale Conosco</a>
     </header>
 
-    <!-- Banner -->
-
-    <section class="banner">
-
-        <img src="imagens/banner-principal.png"
-             class="banner-principal"
-             alt="TEC Carioca Refrigeração">
-
-        <a href="https://wa.me/55SEUNUMERO"
-           class="botao-whatsapp-principal"
-           target="_blank">
-
-            Agendar Atendimento
-
-        </a>
-
+    <!-- Banner Principal -->
+    <section class="hero-section" id="sobre">
+        <div class="hero-content">
+            <span>Assistência Técnica Especializada</span>
+            <h1>Instalação e Manutenção de Refrigeração Residencial e Comercial</h1>
+            <p>Trabalhamos com rapidez, peças de altíssima qualidade e agendamento personalizado para garantir o melhor funcionamento dos seus equipamentos no Rio de Janeiro.</p>
+        </div>
     </section>
 
-    <!-- Quem Somos -->
-
-    <section class="quem-somos">
-
-        <div class="container">
-
-            <div class="titulo-secao">
-
-                <span>Quem Somos</span>
-
-                <h2>TEC Carioca Refrigeração</h2>
-
+    <!-- Seção de Serviços -->
+    <section class="services-section" id="servicos">
+        <h2>Serviços Especializados</h2>
+        <p class="services-subtitle">Atendimento padrão de autorizada multimarcas com foco em eficiência</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-wind"></i>
+                <h3>Ar-Condicionado</h3>
+                <p>Instalação profissional, higienização completa, manutenção preventiva e correção de vazamentos.</p>
             </div>
 
-            <div class="conteudo-sobre">
-
-                <div class="texto-sobre">
-
-                    <p>
-
-                        Somos especializados em instalação, manutenção preventiva
-                        e corretiva de equipamentos de refrigeração residencial e comercial.
-
-                    </p>
-
-                    <p>
-
-                        Trabalhamos com rapidez, qualidade, compromisso e atendimento personalizado.
-
-                    </p>
-
-                </div>
-
-                <div class="imagem-sobre">
-
-                    <img src="imagens/logo.png"
-                         alt="TEC Carioca">
-
-                </div>
-
+            <div class="service-card">
+                <i class="fas fa-snowflake"></i>
+                <h3>Geladeiras & Freezers</h3>
+                <p>Reparo de motor, troca de borrachas, carga de gás e manutenção do sistema de degelo.</p>
             </div>
 
+            <div class="service-card">
+                <i class="fas fa-tshirt"></i>
+                <h3>Máquinas de Lavar</h3>
+                <p>Manutenção mecânica e elétrica, troca de placas, bombas de água e higienização interna.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-fire"></i>
+                <h3>Conversão de Fogão</h3>
+                <p>Conversão segura de fogões e cooktops para gás encanado (GN) ou gás de botijão (GLP) com testes de vazamento.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Micro-ondas</h3>
+                <p>Troca de magnetron, reparo de placas eletrônicas e testes gerais de funcionamento.</p>
+            </div>
         </div>
-
-    </section>
-    <!-- Serviços -->
-
-    <section class="servicos">
-
-        <div class="container">
-
-            <div class="titulo-secao">
-
-                <span>Serviços</span>
-
-                <h2>O que fazemos</h2>
-
-            </div>
-
-            <div class="cards-servicos">
-
-                <div class="card-servico">
-
-                    <h3>Ar-Condicionado</h3>
-
-                    <p>Instalação, manutenção preventiva e corretiva.</p>
-
-                </div>
-
-                <div class="card-servico">
-
-                    <h3>Geladeiras</h3>
-
-                    <p>Conserto e manutenção de todas as marcas.</p>
-
-                </div>
-
-                <div class="card-servico">
-
-                    <h3>Máquinas de Lavar</h3>
-
-                    <p>Diagnóstico e reparo com qualidade.</p>
-
-                </div>
-
-                <div class="card-servico">
-
-                    <h3>Micro-ondas</h3>
-
-                    <p>Assistência técnica especializada.</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
     </section>
 
     <!-- Contato -->
-
-    <section class="contato">
-
-        <div class="container">
-
-            <div class="titulo-secao">
-
-                <span>Contato</span>
-
-                <h2>Solicite seu atendimento</h2>
-
-            </div>
-
-            <div class="contato-box">
-
-                <a href="https://wa.me/55SEUNUMERO"
-                   class="botao-whatsapp grande"
-                   target="_blank">
-
-                    Agendar pelo WhatsApp
-
-                </a>
-
-            </div>
-
-        </div>
-
+    <section class="cta-section" id="contato">
+        <h2>Precisa de um Técnico Agora?</h2>
+        <p>Receba um atendimento rápido e agendado diretamente na sua residência ou empresa.</p>
+        <a href="https://wa.me/5521968182380" class="btn-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> Agendar pelo WhatsApp
+        </a>
     </section>
 
+    <!-- Botão Flutuante -->
+    <a href="https://wa.me/5521968182380" class="whatsapp-fixed" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Rodapé -->
-
     <footer>
-
-        <div class="container">
-
-            <img src="imagens/logo.png"
-                 alt="TEC Carioca Refrigeração"
-                 class="logo-rodape">
-
-            <p>
-
-                © 2026 TEC Carioca Refrigeração.
-                Todos os direitos reservados.
-
-            </p>
-
-        </div>
-
+        <p>&copy; 2026 TC Carioca Refrigeração. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
-
 </body>
-
 </html>
