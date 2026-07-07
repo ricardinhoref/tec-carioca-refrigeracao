@@ -66,15 +66,11 @@ elementos.forEach((el)=>{
 const whatsapp = document.querySelector(".botao-whatsapp");
 
 if(whatsapp){
-
-    whatsapp.href="https://wa.me/5500000000000";
-
+    whatsapp.href = "https://wa.me/5521968182380";
 }
 
 const whatsappFlutuante = document.querySelector(".whatsapp-fixo");
 
 if(whatsappFlutuante){
-
-    whatsappFlutuante.href="https://wa.me/5500000000000";
-
+    whatsappFlutuante.href = "https://wa.me/5521968182380";
 }
