@@ -208,3 +208,25 @@ header .logo img{
     height:auto;
     display:block;
 }
+/* ===========================
+   LOGO DO CABEÇALHO
+=========================== */
+
+header{
+    background:#ffffff;
+    padding:15px 0;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+header .container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:300px;
+    height:auto;
+}
