@@ -70,11 +70,11 @@ header .container{
 }
 
 .texto-banner span {
-    color: #0b6efd;
-    font-size: 18px;
-    font-weight: 600;
+   mini-logo-banner 
+color: #0b6efd;  
+   font-size: 18px;   
+font-weight: 600;
 }
-
 .texto-banner h1 {
     font-size: 54px;
     line-height: 64px;
