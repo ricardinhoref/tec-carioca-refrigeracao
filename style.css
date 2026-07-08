@@ -47,15 +47,15 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Visual original restaurado e limpo)
+   BANNER PRINCIPAL (Versão Original Restaurada)
 =========================== */
 .banner{
     width:100%;
     min-height:100vh;
-    background: linear-gradient(rgba(0, 58, 112, 0.90), rgba(0, 58, 112, 0.90)), url('logo.png');
-    background-repeat: no-repeat;
-    background-position: center center; 
-    background-size: 450px auto; 
+    background:linear-gradient(rgba(0,58,112,.85),rgba(0,58,112,.85)),url('logo.png');
+    background-position:center;
+    background-size:contain;
+    background-repeat:no-repeat;
     display:flex;
     align-items:center;
     position:relative;
@@ -112,10 +112,9 @@ header .container{
     transform:translateY(-4px);
 }
 
-/* Bloco invisível apenas para segurar o espaço e manter o texto no lugar original */
-.imagem-banner-limpa{
+/* Mantém o alinhamento original do texto na esquerda */
+.imagem-banner-vazia{
     width:50%;
-    background: transparent;
 }
 
 .onda-inferior{
@@ -322,7 +321,7 @@ footer p{
         flex-direction:column;
         text-align:center;
     }
-    .texto-banner, .imagem-banner-limpa, .texto-sobre{
+    .texto-banner, .imagem-banner-vazia, .texto-sobre{
         width:100%;
     }
     .conteudo-sobre{
