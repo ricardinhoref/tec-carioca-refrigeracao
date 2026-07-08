@@ -1,5 +1,54 @@
 /* ===========================
-   BANNER PRINCIPAL (O que você gostou!)
+   CONFIGURAÇÕES GERAIS
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* ===========================
+   TOP BAR & CABEÇALHO
+========================== */
+.top-bar {
+    background-color: #002d54;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-bar .contact-info span {
+    margin-right: 20px;
+}
+
+.top-bar .social-links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.top-bar .social-links a:hover {
+    color: #0b6efd;
+}
+
+/* ===========================
+   BANNER PRINCIPAL (O perfeito com a logo de fundo)
 =========================== */
 .banner {
     width: 100%;
@@ -28,37 +77,83 @@
 .banner .container {
     position: relative;
     z-index: 2;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* ===========================
-   QUEM SOMOS (Organizado para não ocupar espaço)
+   QUEM SOMOS (Original completo)
 =========================== */
 .quem-somos {
-    position: relative;
-    padding: 60px 0;
+    padding: 80px 0;
     background: #ffffff;
-    z-index: 2;
     text-align: center;
 }
 
-/* Botão elegante para abrir a janela */
-.btn-abrir-sobre {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 35px;
-    background: #0b6efd;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: .3s;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+.quem-somos h2 {
+    font-size: 36px;
+    color: #002d54;
+    margin-bottom: 20px;
 }
 
-.btn-abrir-sobre:hover {
-    background: #0056c9;
-    transform: translateY(-2px);
+.quem-somos p {
+    font-size: 18px;
+    line-height: 32px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ===========================
+   SERVIÇOS
+=========================== */
+.servicos {
+    padding: 80px 0;
+    background: #f4f7f6;
+}
+
+.servicos h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #002d54;
+    margin-bottom: 40px;
+}
+
+.grade-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cartao-servico {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.cartao-servico:hover {
+    transform: translateY(-5px);
+}
+
+/* ===========================
+   RODAPÉ / CONTATO
+=========================== */
+footer {
+    background-color: #002d54;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
