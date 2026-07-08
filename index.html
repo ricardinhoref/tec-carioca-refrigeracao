@@ -15,14 +15,29 @@
 </head>
 <body>
 
+    <!-- CABEÇALHO ORIGINAL (TOTALMENTE INTOCADO) -->
+    <header class="topo">
+        <div class="container">
+            <div class="logo">
+                <h1>Tec<span>Carioca</span></h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#sobre">Quem Somos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <!-- BANNER PRINCIPAL -->
-    <section class="banner">
+    <section class="banner" style="height: 80vh; background-color: #333; color: white; display: flex; align-items: center; text-align: center; margin-top: 90px;">
         <div class="container">
             <div class="conteudo-banner">
-                <h1>Tecnologia e Confiança<br>Para o Seu Clima</h1>
+                <h1 style="font-size: 48px; margin-bottom: 20px;">Tecnologia e Confiança<br>Para o Seu Clima</h1>
                 <p>Sua solução completa em refrigeração e climatização no Rio de Janeiro.</p>
-                <!-- Botão Redondo com Símbolo do WhatsApp -->
-                <a href="https://wa.me/5521968182380" class="botao-whatsapp-icone" target="_blank">
+                <a href="https://wa.me/5521968182380" class="botao-whatsapp-icone" target="_blank" style="display: inline-block; margin-top: 20px; font-size: 30px; color: #25d366;">
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
@@ -30,84 +45,84 @@
     </section>
 
     <!-- QUEM SOMOS -->
-    <section id="sobre" class="quem-somos">
+    <section id="sobre" class="quem-somos" style="padding: 100px 0;">
         <div class="container">
-            <div class="titulo-secao">
-                <span>Nossa História</span>
-                <h2>Quem Somos</h2>
+            <div class="titulo-secao" style="text-align: center; margin-bottom: 60px;">
+                <span style="color: #007bff; text-transform: uppercase; font-weight: 600; font-size: 14px; letter-spacing: 2px;">Nossa História</span>
+                <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-top: 10px;">Quem Somos</h2>
             </div>
             <div class="conteudo-sobre">
                 <div class="texto-sobre">
                     <p>A Tec Carioca Refrigeração nasceu com o objetivo de entregar o melhor serviço de climatização do Rio de Janeiro. Atendemos residências e comércios com o máximo de profissionalismo.</p>
                     <p>Contamos com técnicos qualificados prontos para resolver desde uma simples limpeza até instalações complexas de sistemas de refrigeração.</p>
                 </div>
-                <div class="imagem-sobre">
-                    <!-- Espaço limpo -->
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVIÇOS -->
-    <section id="servicos" class="servicos">
+    <!-- SERVIÇOS MODERNOS (ESTILIZADOS DIRETAMENTE PARA NÃO ERRAR) -->
+    <section id="servicos" style="padding: 100px 0; background-color: #f4f7f6;">
         <div class="container">
-            <div class="titulo-secao">
-                <span>O Que Fazemos</span>
-                <h2>Nossos Serviços</h2>
+            <div class="titulo-secao" style="text-align: center; margin-bottom: 60px;">
+                <span style="color: #007bff; text-transform: uppercase; font-weight: 600; font-size: 14px; letter-spacing: 2px;">O Que Fazemos</span>
+                <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-top: 10px;">Nossos Serviços</h2>
             </div>
-            <div class="grade-servicos">
-                <!-- Janela 1 -->
-                <div class="cartao-servico">
-                    <div class="icone-servico"><i class="fas fa-snowflake"></i></div>
-                    <div class="info-cartao">
-                        <h3>Instalação Split</h3>
-                        <p>Instalação de ar-condicionado split seguindo rigorosamente as normas dos fabricantes para manter sua garantia.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                
+                <!-- Janela 1: Instalação -->
+                <div style="background-color: #e0e5ec; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.05), -8px -8px 16px rgba(255, 255, 255, 0.8);">
+                    <div style="width: 90px; height: 90px; margin: 0 auto 25px auto; border-radius: 50%; background: rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.03), inset -5px -5px 10px rgba(255, 255, 255, 0.6);">
+                        <i class="fas fa-snowflake" style="font-size: 36px; color: #007bff;"></i>
                     </div>
+                    <h3 style="font-size: 20px; margin-bottom: 15px; color: #222;">Instalação Split</h3>
+                    <p style="font-size: 14px; color: #666;">Instalação de ar-condicionado split seguindo rigorosamente as normas dos fabricantes para manter sua garantia.</p>
                 </div>
 
-                <!-- Janela 2 -->
-                <div class="cartao-servico">
-                    <div class="icone-servico"><i class="fas fa-soap"></i></div>
-                    <div class="info-cartao">
-                        <h3>Higienização</h3>
-                        <p>Limpeza profunda para eliminar fungos e bactérias, garantindo um ar puro e melhor rendimento do aparelho.</p>
+                <!-- Janela 2: Higienização -->
+                <div style="background-color: #e0e5ec; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.05), -8px -8px 16px rgba(255, 255, 255, 0.8);">
+                    <div style="width: 90px; height: 90px; margin: 0 auto 25px auto; border-radius: 50%; background: rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.03), inset -5px -5px 10px rgba(255, 255, 255, 0.6);">
+                        <i class="fas fa-soap" style="font-size: 36px; color: #007bff;"></i>
                     </div>
+                    <h3 style="font-size: 20px; margin-bottom: 15px; color: #222;">Higienização</h3>
+                    <p style="font-size: 14px; color: #666;">Limpeza profunda para eliminar fungos e bactérias, garantindo um ar puro e melhor rendimento do aparelho.</p>
                 </div>
 
-                <!-- Janela 3 -->
-                <div class="cartao-servico">
-                    <div class="icone-servico"><i class="fas fa-plug"></i></div>
-                    <div class="info-cartao">
-                        <h3>Linha Branca</h3>
-                        <p>Consertos e manutenção preventiva em geladeiras, freezers e eletrodomésticos com rapidez e peças de qualidade.</p>
+                <!-- Janela 3: Linha Branca -->
+                <div style="background-color: #e0e5ec; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.05), -8px -8px 16px rgba(255, 255, 255, 0.8);">
+                    <div style="width: 90px; height: 90px; margin: 0 auto 25px auto; border-radius: 50%; background: rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.03), inset -5px -5px 10px rgba(255, 255, 255, 0.6);">
+                        <i class="fas fa-plug" style="font-size: 36px; color: #007bff;"></i>
                     </div>
+                    <h3 style="font-size: 20px; margin-bottom: 15px; color: #222;">Linha Branca</h3>
+                    <p style="font-size: 14px; color: #666;">Consertos e manutenção preventiva em geladeiras, freezers e eletrodomésticos com rapidez e peças de qualidade.</p>
                 </div>
 
-                <!-- Janela 4 -->
-                <div class="cartao-servico">
-                    <div class="icone-servico"><i class="fas fa-tools"></i></div>
-                    <div class="info-cartao">
-                        <h3>Comercial & PMOC</h3>
-                        <p>Manutenção e assistência técnica para balcões, câmaras frias e adequação completa às normas do PMOC.</p>
+                <!-- Janela 4: Comercial -->
+                <div style="background-color: #e0e5ec; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.05), -8px -8px 16px rgba(255, 255, 255, 0.8);">
+                    <div style="width: 90px; height: 90px; margin: 0 auto 25px auto; border-radius: 50%; background: rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.03), inset -5px -5px 10px rgba(255, 255, 255, 0.6);">
+                        <i class="fas fa-tools" style="font-size: 36px; color: #007bff;"></i>
                     </div>
+                    <h3 style="font-size: 20px; margin-bottom: 15px; color: #222;">Comercial & PMOC</h3>
+                    <p style="font-size: 14px; color: #666;">Manutenção e assistência técnica para balcões, câmaras frias e adequação completa às normas do PMOC.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- DIFERENCIAIS -->
-    <section class="diferenciais">
+    <section class="diferenciais" style="padding: 80px 0;">
         <div class="container">
-            <div class="titulo-secao">
-                <span>Por Que Nos Escolher?</span>
-                <h2>Nossos Diferenciais</h2>
+            <div class="titulo-secao" style="text-align: center; margin-bottom: 60px;">
+                <span style="color: #007bff; text-transform: uppercase; font-weight: 600; font-size: 14px; letter-spacing: 2px;">Por Que Nos Escolher?</span>
+                <h2 style="font-size: 36px; font-weight: 700; color: #222; margin-top: 10px;">Nossos Diferenciais</h2>
             </div>
-            <div class="cards-diferenciais">
-                <div class="card-diferencial">
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <div style="padding: 20px; background: #fff; border: 1px solid #ddd; border-radius: 10px; width: 45%;">
                     <h3>Garantia no Serviço</h3>
                     <p>Todos os nossos serviços de instalação e manutenção contam com garantia por escrito.</p>
                 </div>
-                <div class="card-diferencial">
+                <div style="padding: 20px; background: #fff; border: 1px solid #ddd; border-radius: 10px; width: 45%;">
                     <h3>Técnicos Certificados</h3>
                     <p>Nossa equipe passa por treinamentos constantes nas principais marcas do mercado.</p>
                 </div>
@@ -116,15 +131,15 @@
     </section>
 
     <!-- CONTATO -->
-    <section id="contato" class="contato">
+    <section id="contato" style="padding: 80px 0; text-align: center;">
         <div class="container">
             <div class="titulo-secao">
-                <span>Fale Conosco</span>
+                <span style="color: #007bff; text-transform: uppercase;">Fale Conosco</span>
                 <h2>Solicite um Orçamento</h2>
             </div>
-            <div class="contato-box">
+            <div style="margin-top: 30px;">
                 <p style="margin-bottom: 30px; font-size: 18px;">Clique no botão abaixo para iniciar uma conversa direto no nosso WhatsApp.</p>
-                <a href="https://wa.me/5521968182380" class="botao-whatsapp grande" target="_blank">
+                <a href="https://wa.me/5521968182380" target="_blank" style="background-color: #25d366; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 50px; font-size: 18px;">
                     Chamar no WhatsApp
                 </a>
             </div>
@@ -132,17 +147,11 @@
     </section>
 
     <!-- RODAPÉ -->
-    <footer>
+    <footer style="padding: 40px 0; background: #333; color: white; text-align: center;">
         <div class="container">
             <p>&copy; 2026 Tec Carioca Refrigeração. Todos os direitos reservados.</p>
-            <p style="margin-top: 10px; font-size: 13px; opacity: 0.6;">Rio de Janeiro - RJ</p>
         </div>
     </footer>
-
-    <!-- WHATSAPP FIXO -->
-    <a href="https://wa.me/5521968182380" class="whatsapp-fixo" target="_blank">
-        <span style="color: white; font-weight: bold; font-size: 14px;">Whats</span>
-    </a>
 
 </body>
 </html>
