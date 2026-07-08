@@ -145,29 +145,28 @@ header .container{
 
 }
 
+/* Copie e cole este bloco no lugar do anterior */
+
 /* ===========================
-   BANNER
+   BANNER (Ajustado para Logo Clara)
 =========================== */
-
-.banner{
-
-    width:100%;
-
-    min-height:100vh;
-
-    background:#ffffff;
-
-    display:flex;
-
-    align-items:center;
-
-    position:relative;
-
-    overflow:hidden;
-
+.banner {
+    width: 100%;
+    min-height: 100vh;
+    background: #003a70; /* Azul Profundo: Destaca a logo branca/clara */
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.banner-container{
+/* Garante que o texto do banner também fique legível no azul */
+.texto-banner h1 {
+    color: #ffffff; /* Título Branco no fundo azul */
+}
+.texto-banner p {
+    color: #f0f0f0; /* Parágrafo cinza bem claro */
+}
 
     display:flex;
 
