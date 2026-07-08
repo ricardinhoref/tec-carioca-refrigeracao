@@ -15,7 +15,7 @@ body {
 
 /* ===========================
    TOP BAR & CABEÇALHO
-========================== */
+=========================== */
 .top-bar {
     background-color: #002d54;
     color: white;
@@ -46,16 +46,16 @@ body {
 .top-bar .social-links a:hover {
     color: #0b6efd;
 }
+
 /* ===========================
-   BANNER PRINCIPAL (Ajustado para a Nova Logo)
+   BANNER PRINCIPAL (Marca d'água e layout limpo)
 =========================== */
 .banner {
     width: 100%;
     min-height: 80vh;
-    /* Usamos a nova logo como fundo, cobrindo todo o espaço */
     background-image: url('logo.png');
     background-position: center;
-    background-size: cover; /* Faz as gotinhas e o fundo azul cobrirem todo o banner */
+    background-size: cover; 
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -63,7 +63,7 @@ body {
     position: relative;
 }
 
-/* Efeito de Marca d'água: suaviza a imagem de fundo para dar leitura */
+/* Efeito de Marca d'água: clareia a imagem de fundo */
 .banner::before {
     content: '';
     position: absolute;
@@ -71,11 +71,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(254, 254, 254, 0.35); /* Clarea o fundo criando o efeito marca d'água */
+    background-color: rgba(254, 254, 254, 0.45); /* Transparência suave */
     z-index: 1;
 }
 
-/* Organização do conteúdo para não sobrepor o centro da logo */
+/* Alinha o conteúdo na esquerda para deixar o centro da logo livre */
 .banner .container {
     position: relative;
     z-index: 2;
@@ -84,15 +84,15 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinha o texto na esquerda, liberando o centro da logo */
+    align-items: flex-start; 
 }
 
-/* Textos do Banner */
 .banner h1 {
     font-size: 46px;
     font-weight: 700;
     color: #002d54;
     margin-bottom: 15px;
+    line-height: 56px;
 }
 
 .banner p {
@@ -107,20 +107,20 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     background-color: #25D366;
     color: #fff;
     text-decoration: none;
-    border-radius: 50%; /* Torna o botão perfeitamente redondo */
+    border-radius: 50%; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     transition: .3s;
-    font-size: 30px; /* Tamanho do ícone do Zap */
+    font-size: 35px; 
 }
 
 .botao-whatsapp:hover {
     background-color: #1ebd59;
-    transform: scale(1.1); /* Dá um leve zoom ao passar o mouse */
+    transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
@@ -198,35 +198,4 @@ footer .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-}
-/* ===========================
-   LOGO DO CABEÇALHO
-=========================== */
-
-header .logo img{
-    width:260px;
-    height:auto;
-    display:block;
-}
-/* ===========================
-   LOGO DO CABEÇALHO
-=========================== */
-
-header{
-    background:#ffffff;
-    padding:15px 0;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-}
-
-header .container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-}
-
-.logo img{
-    width:300px;
-    height:auto;
 }
