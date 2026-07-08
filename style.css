@@ -47,18 +47,17 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Corrigido o degradê da própria imagem)
+   BANNER PRINCIPAL
 =========================== */
 .banner{
     width:100%;
     min-height:100vh;
-    background-color: #003a70; /* Fundo azul escuro totalmente liso */
+    background-color: #003a70; /* Cor azul sólida e única */
     display:flex;
     align-items:center;
     position:relative;
     overflow:hidden;
 }
-
 .banner-container{
     display:flex;
     align-items:center;
