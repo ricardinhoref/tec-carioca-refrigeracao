@@ -199,3 +199,12 @@ footer .container {
     max-width: 1200px;
     margin: 0 auto;
 }
+/* ===========================
+   LOGO DO CABEÇALHO
+=========================== */
+
+header .logo img{
+    width:260px;
+    height:auto;
+    display:block;
+}
