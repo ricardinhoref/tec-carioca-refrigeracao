@@ -1,221 +1,152 @@
-/* ===========================
-   CONFIGURAÇÕES GERAIS
-=========================== */
+/* --- CONFIGURAÇÕES GERAIS --- */
+:root {
+    --primary-color: #007bff; /* Azul base */
+    --accent-color: #1affe6;  /* Ciano brilhante para gradiente */
+    --bg-light: #f4f7f6;      /* Fundo da seção */
+    --card-bg: #e0e5ec;       /* Fundo neomórfico do cartão */
+    --text-color: #333;
+    --font-main: 'Poppins', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #f4f7f6;
-    color: #333;
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: #fff;
+    line-height: 1.6;
 }
 
-/* ===========================
-   BANNER PRINCIPAL (Marca d'água Limpa)
-=========================== */
-.banner {
-    width: 100%;
-    min-height: 85vh; 
-    background-image: url('logo.png'); 
-    background-position: center;
-    background-size: cover; 
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    position: relative;
-    color: white; 
-}
-
-.banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.45); 
-    z-index: 1;
-}
-
-.banner .container {
-    position: relative;
-    z-index: 2; 
-    width: 90%;
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center; 
+    padding: 0 20px;
 }
 
-.conteudo-banner {
-    text-align: center; 
-}
-
-.banner h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
-    line-height: 58px;
-}
-
-.banner p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
-
-/* WHATSAPP FIXO NO CANTO INFERIOR DIREITO */
-.botao-whatsapp-icone {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 65px;
-    height: 65px;
-    background-color: #25D366;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50%; 
-    font-size: 35px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: .3s;
-}
-
-.botao-whatsapp-icone:hover {
-    background-color: #1ebd59;
-    transform: scale(1.1); 
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-}
-
-/* ===========================
-   QUEM SOMOS 
-=========================== */
-.quem-somos {
-    padding: 80px 0;
-    background: #ffffff;
-    text-align: center;
-}
-
-.quem-somos h2 {
-    font-size: 36px;
-    color: #002d54;
-    margin-bottom: 20px;
-}
-/* ===========================
-   SERVIÇOS (Janelas Modernas Organizadas)
-=========================== */
-.servicos {
-    padding: 80px 0;
-    background: #f4f7f6;
-}
-
+/* --- TÍTULOS DE SEÇÃO GERAIS --- */
 .titulo-secao {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .titulo-secao span {
-    font-size: 14px;
+    color: var(--primary-color);
     text-transform: uppercase;
-    color: #002d54;
     font-weight: 600;
+    font-size: 14px;
     letter-spacing: 2px;
-    display: block;
-    margin-bottom: 5px;
 }
 
 .titulo-secao h2 {
     font-size: 36px;
-    color: #002d54;
     font-weight: 700;
+    color: #222;
+    margin-top: 10px;
 }
 
-.grade-servicos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Caixa do serviço em formato de janela/card */
-.cartao-servico {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 30px 20px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* --- BANNER PRINCIPAL --- */
+.banner {
+    height: 80vh;
+    background-color: #333;
+    color: white;
     display: flex;
-    flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
+.conteudo-banner h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* --- SEÇÃO QUEM SOMOS --- */
+.quem-somos {
+    padding: 100px 0;
+}
+
+/* --- SEÇÃO SERVIÇOS (Onde está a mágica!) --- */
+.servicos {
+    padding: 100px 0;
+    background-color: var(--bg-light); /* Fundo limpo e moderno */
+}
+
+.grade-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Estilo do Cartão Neomórfico */
+.cartao-servico {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    
+    /* Efeito Neomórfico Suave (Raise) */
+    box-shadow: 
+        8px 8px 16px rgba(0, 0, 0, 0.05), /* Sombra suave escura */
+        -8px -8px 16px rgba(255, 255, 255, 0.8); /* Sombra brilhante clara */
+}
+
+/* Efeito de Clique no Cartão */
 .cartao-servico:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 45, 84, 0.15);
+    box-shadow: 
+        inset 5px 5px 10px rgba(0, 0, 0, 0.03),
+        inset -5px -5px 10px rgba(255, 255, 255, 0.6);
 }
 
-/* Estilo do Ícone no topo da Janela */
+/* --- Estilo dos Ícones Modernos --- */
 .icone-servico {
-    font-size: 45px;
-    margin-bottom: 15px;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    
+    /* Moldura de Vidro (Frosted Glass) */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* Alinhamento Central do Ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Sombra Neomórfica Interna no Ícone */
+    box-shadow: 
+        inset 5px 5px 10px rgba(0, 0, 0, 0.03),
+        inset -5px -5px 10px rgba(255, 255, 255, 0.6);
 }
 
-/* Textos dentro da Janela */
+/* Cor e Gradiente do Ícone Técnico (FontAwesome) */
+.icone-servico i {
+    font-size: 36px;
+    /* Gradiente Moderno nos Ícones (Azul p/ Ciano) */
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial; /* Corrige renderização em alguns navegadores */
+}
+
 .info-cartao h3 {
     font-size: 20px;
-    color: #002d54;
-    margin-bottom: 12px;
-    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222;
 }
 
 .info-cartao p {
     font-size: 14px;
     color: #666;
-    line-height: 22px;
 }
-/* ===========================
-   CONTATO (Botão Central)
-=========================== */
-.contato {
+
+/* --- OUTRAS SEÇÕES (Simplificadas para o exemplo) --- */
+.diferenciais, .contato, footer {
     padding: 80px 0;
-    background: #ffffff;
-    text-align: center;
-}
-
-.botao-whatsapp.grande {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    padding: 15px 35px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.botao-whatsapp.grande:hover {
-    background-color: #1ebd59;
-}
-
-/* ===========================
-   RODAPÉ
-=========================== */
-footer {
-    background-color: #002d54;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
 }
