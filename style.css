@@ -14,57 +14,46 @@ body {
 }
 
 /* ===========================
-   TOP BAR & CABEÇALHO
-=========================== */
-.top-bar {
-    background-color: #002d54;
-    color: white;
-    padding: 10px 0;
-    font-size: 14px;
+   CABEÇALHO
+========================== */
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 10;
 }
 
-.top-bar .container {
+header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centraliza a logo no topo */
     align-items: center;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.top-bar .contact-info span {
-    margin-right: 20px;
-}
-
-.top-bar .social-links a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.top-bar .social-links a:hover {
-    color: #0b6efd;
+header .logo img {
+    max-height: 80px; /* Tamanho da logo no topo */
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Marca d'água Perfeita)
+   BANNER PRINCIPAL (O layout original que você gostou!)
 =========================== */
 .banner {
     width: 100%;
-    min-height: 85vh;
-    background-image: url('logo.png');
-    background-position: center right 10%; /* Empurra a logo para a direita */
-    background-size: contain; /* Mantém a logo inteira sem cortar */
+    min-height: 80vh; /* Altura do banner */
+    background-image: url('logo.png'); /* Usa a sua logo como fundo */
+    background-position: center;
+    background-size: cover; /* Faz a logo cobrir todo o fundo */
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    padding: 80px 0;
     position: relative;
-    background-color: #ffffff; 
+    color: white; /* Cor do texto sobre o banner */
 }
 
-/* Efeito Marca d'água suave no fundo */
+/* Camada escura para dar leitura aos textos */
 .banner::before {
     content: '';
     position: absolute;
@@ -72,40 +61,43 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.75); /* Deixa a logo bem clarinha ao fundo */
+    background-color: rgba(0, 0, 0, 0.4); /* Escurece o fundo para destacar o texto */
     z-index: 1;
 }
 
 .banner .container {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Garante que o conteúdo fique sobre a camada escura */
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
 }
 
-/* Alinha todo o texto na esquerda para não cobrir o centro da logo */
+/* Organização do conteúdo do banner */
 .conteudo-banner {
-    max-width: 550px; 
-    text-align: left;
+    text-align: center; /* Centraliza o texto */
 }
 
 .banner h1 {
-    font-size: 44px;
+    font-size: 48px;
     font-weight: 700;
-    color: #002d54;
     margin-bottom: 20px;
-    line-height: 54px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Sombra no texto para melhor leitura */
+    line-height: 58px;
 }
 
 .banner p {
-    font-size: 18px;
-    color: #444;
-    margin-bottom: 35px;
-    line-height: 28px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
-/* BOTAO DO WHATSAPP (Apenas o símbolo redondo verde) */
+/* BOTÃO DO WHATSAPP (A bolinha verde redonda) */
 .botao-whatsapp-icone {
     display: inline-flex;
     align-items: center;
@@ -113,18 +105,18 @@ body {
     width: 65px;
     height: 65px;
     background-color: #25D366;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
-    border-radius: 50%;
+    border-radius: 50%; /* Torna o botão redondo */
     font-size: 35px;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    transition: .3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: .3s;
 }
 
 .botao-whatsapp-icone:hover {
     background-color: #1ebd59;
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    transform: translateY(-3px); /* Levanta o botão ao passar o mouse */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 /* ===========================
