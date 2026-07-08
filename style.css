@@ -1,11 +1,11 @@
 /* ===========================
    RESET
 =========================== */
-
 *{
     margin:0;
     padding:0;
-    box-sizing:border-box;
+    box-box:border-box;
+    box-sizing: border-box;
 }
 
 html{
@@ -13,879 +13,371 @@ html{
 }
 
 body{
-
     font-family:'Poppins',sans-serif;
     background:#ffffff;
     color:#1f2937;
     overflow-x:hidden;
-
+    min-width:320px;
 }
 
 /* ===========================
    CONTAINER
 =========================== */
-
 .container{
-
     width:90%;
     max-width:1400px;
     margin:auto;
-
-}
-
-/* ===========================
-   MARCA D'ÁGUA
-=========================== */
-
-.marca-dagua{
-
-    position:fixed;
-
-    top:50%;
-
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:900px;
-
-    height:900px;
-
-    background:url("imagens/logo.png") center center no-repeat;
-
-    background-size:contain;
-
-    opacity:0.04;
-
-    pointer-events:none;
-
-    z-index:0;
-
 }
 
 /* ===========================
    CABEÇALHO
 =========================== */
-
-/* ===========================
-   CABEÇALHO (Ajustado)
-=========================== */
-
 header{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 30px 0; /* Aumentamos um pouco o espaço no topo */
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    padding:25px 0;
 }
 
 header .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img{
-    width: 100%;
-    max-width: 200px; /* Tamanho ideal para não parecer gigante */
-    height: auto;
-    display: block;
-    /* Se a sua imagem tiver um fundo branco quadrado e você quiser tentar sumir com ele: */
-    mix-blend-mode: multiply; 
-}
-/* ===========================
-   WHATSAPP
-=========================== */
-
-.whatsapp-fixo{
-
-    position:fixed;
-
-    right:25px;
-
-    bottom:25px;
-
-    width:65px;
-
-    height:65px;
-
-    border-radius:50%;
-
-    background:#25D366;
-
     display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
-
-    z-index:9999;
-
-    transition:.3s;
-
-}
-
-.whatsapp-fixo:hover{
-
-    transform:scale(1.1);
-
-}
-
-.whatsapp-fixo img{
-
-    width:34px;
-
-}
-
-/* Copie e cole este bloco no lugar do anterior */
-
-/* ===========================
-   BANNER (Ajustado para Logo Clara)
-=========================== */
-.banner {
-    width: 100%;
-    min-height: 100vh;
-    background: #003a70; /* Azul Profundo: Destaca a logo branca/clara */
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Garante que o texto do banner também fique legível no azul */
-.texto-banner h1 {
-    color: #ffffff; /* Título Branco no fundo azul */
-}
-.texto-banner p {
-    color: #f0f0f0; /* Parágrafo cinza bem claro */
-}
-
-    display:flex;
-
-    align-items:center;
-
     justify-content:space-between;
+    align-items:center;
+}
 
-    gap:70px;
-
+/* ===========================
+   BANNER PRINCIPAL (Fundo Azul Escuro)
+=========================== */
+.banner{
+    width:100%;
+    min-height:100vh;
+    background:#003a70; /* Azul escuro destaca a logo branca */
+    display:flex;
+    align-items:center;
     position:relative;
+    overflow:hidden;
+}
 
+.banner-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:70px;
+    position:relative;
     z-index:2;
-
 }
 
 .texto-banner{
-
     width:50%;
-
 }
 
 .texto-banner span{
-
     color:#0b6efd;
-
     font-size:18px;
-
     font-weight:600;
-
 }
 
 .texto-banner h1{
-
     font-size:64px;
-
     line-height:72px;
-
-    color:#003a70;
-
+    color:#ffffff; /* Texto branco para ler no fundo azul */
     margin:20px 0;
-
 }
 
 .texto-banner p{
-
     font-size:19px;
-
-    color:#555;
-
+    color:#e5e7eb; /* Texto claro */
     line-height:34px;
-
     margin-bottom:35px;
-
 }
 
 .botao-whatsapp{
-
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
-
     padding:18px 42px;
-
     background:#25D366;
-
     color:#fff;
-
     text-decoration:none;
-
     border-radius:50px;
-
     font-weight:600;
-
     transition:.3s;
-
 }
 
 .botao-whatsapp:hover{
-
     transform:translateY(-4px);
-
 }
 
 .imagem-banner{
-
     width:50%;
-
     text-align:right;
-
 }
 
 .imagem-banner img{
-
     width:100%;
-
     max-width:650px;
+}
 
+.onda-inferior{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:140px;
+    background:#0b6efd;
+    border-radius:100% 100% 0 0;
 }
 
 /* ===========================
-   ONDA
+   QUEM SOMOS
 =========================== */
-
-.onda-inferior{
-
-    position:absolute;
-
-    bottom:0;
-
-    left:0;
-
-    width:100%;
-
-    height:140px;
-
-    background:#0b6efd;
-
-    border-radius:100% 100% 0 0;
-
-}
-/*==================================
-    QUEM SOMOS
-==================================*/
-
 .quem-somos{
-
     position:relative;
     padding:120px 0;
     background:#ffffff;
     z-index:2;
-
 }
 
 .titulo-secao{
-
     text-align:center;
     margin-bottom:70px;
-
 }
 
 .titulo-secao span{
-
     color:#0b6efd;
     font-size:18px;
     font-weight:600;
     text-transform:uppercase;
     letter-spacing:2px;
-
 }
 
 .titulo-secao h2{
-
     margin-top:15px;
     font-size:46px;
     color:#003a70;
     font-weight:700;
-
 }
 
 .conteudo-sobre{
-
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:80px;
-
 }
 
 .texto-sobre{
-
     width:55%;
-
 }
 
 .texto-sobre p{
-
     font-size:18px;
     line-height:34px;
     color:#555;
     margin-bottom:25px;
-
 }
 
 .imagem-sobre{
-
     width:45%;
     text-align:center;
-
 }
 
-.imagem-sobre img{
-
-    width:100%;
-    max-width:520px;
-
-}
-
-/*==================================
-        SERVIÇOS
-==================================*/
-
+/* ===========================
+   SERVIÇOS
+=========================== */
 .servicos{
-
     background:#f5f9ff;
     padding:120px 0;
-
 }
 
 .cards-servicos{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:30px;
-
 }
 
 .card-servico{
-
     background:#ffffff;
-
     border-radius:25px;
-
     padding:45px 30px;
-
     text-align:center;
-
-    transition:.35s;
-
+    transition:.35s ease;
     box-shadow:0 15px 40px rgba(0,0,0,.08);
-
 }
 
 .card-servico:hover{
-
     transform:translateY(-12px);
-
     box-shadow:0 25px 60px rgba(0,0,0,.15);
-
-}
-
-.card-servico img{
-
-    width:85px;
-
-    margin-bottom:25px;
-
 }
 
 .card-servico h3{
-
     font-size:24px;
-
     color:#003a70;
-
     margin-bottom:15px;
-
 }
 
 .card-servico p{
-
     color:#666;
-
     line-height:30px;
-
     font-size:17px;
-
 }
 
-/*==================================
-      DIFERENCIAIS
-==================================*/
-
+/* ===========================
+   DIFERENCIAIS
+=========================== */
 .diferenciais{
-
     padding:120px 0;
-
     background:#ffffff;
-
 }
 
 .cards-diferenciais{
-
     display:grid;
-
     grid-template-columns:repeat(2,1fr);
-
     gap:35px;
-
 }
 
 .card-diferencial{
-
     background:#ffffff;
-
     border-radius:25px;
-
     padding:40px;
-
     border-left:8px solid #0b6efd;
-
     box-shadow:0 15px 40px rgba(0,0,0,.08);
-
-    transition:.35s;
-
+    transition:.35s ease;
 }
 
 .card-diferencial:hover{
-
     transform:translateY(-10px);
-
 }
 
 .card-diferencial h3{
-
     color:#003a70;
-
     margin-bottom:15px;
-
     font-size:26px;
-
 }
 
 .card-diferencial p{
-
     color:#666;
-
     font-size:17px;
-
     line-height:30px;
-
-}
-/*==================================
-        MARCAS
-==================================*/
-
-.marcas{
-
-    padding:120px 0;
-
-    background:#f5f9ff;
-
 }
 
-.logos-marcas{
-
-    display:grid;
-
-    grid-template-columns:repeat(6,1fr);
-
-    gap:35px;
-
-    align-items:center;
-
-    justify-items:center;
-
-    margin-top:60px;
-
-}
-
-.logos-marcas img{
-
-    width:120px;
-
-    opacity:.85;
-
-    transition:.3s;
-
-    filter:grayscale(100%);
-
-}
-
-.logos-marcas img:hover{
-
-    opacity:1;
-
-    transform:scale(1.08);
-
-    filter:grayscale(0%);
-
-}
-
-/*==================================
-        CONTATO
-==================================*/
-
+/* ===========================
+   CONTATO
+=========================== */
 .contato{
-
     padding:120px 0;
-
     background:#ffffff;
-
     text-align:center;
-
 }
 
 .contato-box{
-
     margin-top:50px;
-
 }
 
 .botao-whatsapp.grande{
-
     padding:20px 55px;
-
     font-size:20px;
-
     border-radius:60px;
-
     box-shadow:0 15px 40px rgba(37,211,102,.35);
-
 }
 
-/*==================================
-        RODAPÉ
-==================================*/
-
+/* ===========================
+   RODAPÉ
+=========================== */
 footer{
-
     background:#003a70;
-
     color:#ffffff;
-
     padding:50px 0;
-
     text-align:center;
-
-}
-
-.logo-rodape{
-
-    width:220px;
-
-    margin-bottom:25px;
-
 }
 
 footer p{
-
     font-size:15px;
-
     opacity:.85;
-
 }
 
-/*==================================
-      ANIMAÇÕES
-==================================*/
-
-.card-servico,
-.card-diferencial,
-.botao-whatsapp,
-.whatsapp-fixo,
-.logo img{
-
-    transition:all .35s ease;
-
+/* ===========================
+   WHATSAPP FIXO
+=========================== */
+.whatsapp-fixo{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    z-index:9999;
+    transition:.3s ease;
+    text-decoration: none;
 }
 
-.logo img:hover{
-
-    transform:scale(1.03);
-
+.whatsapp-fixo:hover{
+    transform:scale(1.1);
 }
 
-/*==================================
-      RESPONSIVO
-==================================*/
-
+/* ===========================
+   RESPONSIVO
+=========================== */
 @media(max-width:1100px){
-
-.banner-container{
-
-    flex-direction:column;
-
-    text-align:center;
-
-}
-
-.texto-banner{
-
-    width:100%;
-
-}
-
-.imagem-banner{
-
-    width:100%;
-
-    text-align:center;
-
-}
-
-.conteudo-sobre{
-
-    flex-direction:column;
-
-}
-
-.texto-sobre{
-
-    width:100%;
-
-}
-
-.imagem-sobre{
-
-    width:100%;
-
-}
-
-.cards-servicos{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-.cards-diferenciais{
-
-    grid-template-columns:1fr;
-
-}
-
-.logos-marcas{
-
-    grid-template-columns:repeat(3,1fr);
-
-}
-
+    .banner-container{
+        flex-direction:column;
+        text-align:center;
+    }
+    .texto-banner, .imagem-banner, .texto-sobre, .imagem-sobre{
+        width:100%;
+    }
+    .imagem-banner{
+        text-align:center;
+    }
+    .conteudo-sobre{
+        flex-direction:column;
+    }
+    .cards-servicos{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .cards-diferenciais{
+        grid-template-columns:1fr;
+    }
 }
 
 @media(max-width:768px){
-
-.logo img{
-
-    width:180px;
-
+    .texto-banner h1{
+        font-size:42px;
+        line-height:48px;
+    }
+    .texto-banner p{
+        font-size:17px;
+        line-height:30px;
+    }
+    .cards-servicos{
+        grid-template-columns:1fr;
+    }
+    .whatsapp-fixo{
+        width:58px;
+        height:58px;
+    }
+    .botao-whatsapp{
+        width:100%;
+    }
 }
 
-.texto-banner h1{
-
-    font-size:42px;
-
-    line-height:48px;
-
-}
-
-.texto-banner p{
-
-    font-size:17px;
-
-    line-height:30px;
-
-}
-
-.cards-servicos{
-
-    grid-template-columns:1fr;
-
-}
-
-.logos-marcas{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-.whatsapp-fixo{
-
-    width:58px;
-
-    height:58px;
-
-}
-
-.whatsapp-fixo img{
-
-    width:30px;
-
-}
-
-.botao-whatsapp{
-
-    width:100%;
-
-}
-
-}
-/*==================================
-      ACABAMENTO FINAL
-==================================*/
-
-section{
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-img{
-
-    max-width:100%;
-
-    display:block;
-
-}
-
-a{
-
-    text-decoration:none;
-
-}
-
-button{
-
-    font-family:'Poppins',sans-serif;
-
-}
-
-::selection{
-
-    background:#0b6efd;
-
-    color:#fff;
-
-}
-
-/* Barra de rolagem */
-
+/* Custom Scrollbar */
 ::-webkit-scrollbar{
-
     width:10px;
-
 }
-
 ::-webkit-scrollbar-track{
-
     background:#f2f5fa;
-
 }
-
 ::-webkit-scrollbar-thumb{
-
     background:#0b6efd;
-
     border-radius:20px;
-
 }
-
 ::-webkit-scrollbar-thumb:hover{
-
     background:#0056c9;
-
-}
-
-/*==================================
-      EFEITOS
-==================================*/
-
-.banner::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:-250px;
-
-    right:-250px;
-
-    width:650px;
-
-    height:650px;
-
-    background:rgba(11,110,253,.05);
-
-    border-radius:50%;
-
-}
-
-.banner::after{
-
-    content:"";
-
-    position:absolute;
-
-    bottom:-220px;
-
-    left:-220px;
-
-    width:500px;
-
-    height:500px;
-
-    background:rgba(11,110,253,.05);
-
-    border-radius:50%;
-
-}
-
-/*==================================
-      TRANSIÇÕES
-==================================*/
-
-.card-servico,
-.card-diferencial,
-.botao-whatsapp,
-.whatsapp-fixo,
-.logos-marcas img{
-
-    transition:.35s ease;
-
-}
-
-/*==================================
-      FINAL
-==================================*/
-
-body{
-
-    min-width:320px;
-
 }
