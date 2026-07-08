@@ -47,22 +47,23 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Corrigido para Mosaico de Marca d'água)
+   BANNER PRINCIPAL (Ajustado para a Nova Logo)
 =========================== */
 .banner {
     width: 100%;
     min-height: 80vh;
-    /* Mistura o azul sólido com a logo, criando um padrão repetitivo (mosaico) suave */
-    background: linear-gradient(rgba(0, 58, 112, 0.94), rgba(0, 58, 112, 0.94)), url('logo.png');
+    /* Usamos a nova logo como fundo, cobrindo todo o espaço */
+    background-image: url('logo.png');
     background-position: center;
-    background-size: 150px auto; /* Define um tamanho fixo para as mini-logos do mosaico, evitando que estiquem */
-    background-repeat: repeat; /* Faz a logo se repetir por todo o fundo */
+    background-size: cover; /* Faz as gotinhas e o fundo azul cobrirem todo o banner */
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     padding: 100px 0;
+    position: relative;
 }
 
-/* Criamos um elemento novo apenas para a marca d'água, centralizada e suave */
+/* Camada opcional: caso queira escurecer um pouquinho o fundo para o texto destacar ainda mais */
 .banner::before {
     content: '';
     position: absolute;
@@ -70,16 +71,11 @@ header .container{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('logo.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; /* Faz a logo se ajustar ao tamanho do banner sem distorcer */
-    opacity: 0.1; /* Deixa ela BEM transparente */
-    mix-blend-mode: screen; /* Remove qualquer cor escura (incluindo o preto) e deixa só o desenho */
-    z-index: 1; /* Garante que ela fique atrás do texto */
+    background-color: rgba(0, 0, 0, 0.15); /* Uma leve sombra sobre o fundo */
+    z-index: 1;
 }
 
-/* Garante que o container de texto fique acima da marca d'água */
+/* Garante que o texto do site fique bem visível acima do fundo */
 .banner .container {
     position: relative;
     z-index: 2;
