@@ -1,12 +1,13 @@
 /* ===========================
-   BANNER PRINCIPAL (O que você gostou!)
+   BANNER PRINCIPAL (Ajustado para a Nova Logo)
 =========================== */
 .banner {
     width: 100%;
     min-height: 80vh;
+    /* Usamos a nova logo como fundo, cobrindo todo o espaço */
     background-image: url('logo.png');
     background-position: center;
-    background-size: cover; 
+    background-size: cover; /* Faz as gotinhas e o fundo azul cobrirem todo o banner */
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -14,6 +15,7 @@
     position: relative;
 }
 
+/* Camada opcional: caso queira escurecer um pouquinho o fundo para o texto destacar ainda mais */
 .banner::before {
     content: '';
     position: absolute;
@@ -21,15 +23,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.15); 
+    background-color: rgba(0, 0, 0, 0.15); /* Uma leve sombra sobre o fundo */
     z-index: 1;
 }
 
+/* Garante que o texto do site fique bem visível acima do fundo */
 .banner .container {
     position: relative;
     z-index: 2;
 }
-
 /* ===========================
    QUEM SOMOS (Organizado para não ocupar espaço)
 =========================== */
