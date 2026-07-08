@@ -29,7 +29,6 @@ body {
     color: white; 
 }
 
-/* Camada suave para criar o efeito de marca d'água */
 .banner::before {
     content: '';
     position: absolute;
@@ -51,7 +50,6 @@ body {
     justify-content: center; 
 }
 
-/* Organização do conteúdo do banner */
 .conteudo-banner {
     text-align: center; 
 }
@@ -73,7 +71,7 @@ body {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
-/* O BOTÃO DO WHATSAPP REMOVIDO DO MEIO E FIXADO NO CANTO INFERIOR DIREITO */
+/* WHATSAPP FIXO NO CANTO INFERIOR DIREITO */
 .botao-whatsapp-icone, .whatsapp-fixo {
     position: fixed;
     bottom: 20px;
@@ -123,23 +121,37 @@ body {
 }
 
 /* ===========================
-   SERVIÇOS
+   SERVIÇOS (As Janelas Modernas)
 =========================== */
 .servicos {
     padding: 80px 0;
     background: #f4f7f6;
 }
 
-.servicos h2 {
+.titulo-secao {
     text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-secao span {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #25D366;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.titulo-secao h2 {
     font-size: 36px;
     color: #002d54;
-    margin-bottom: 40px;
+    font-weight: 700;
 }
 
 .grade-servicos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
     width: 90%;
     max-width: 1200px;
@@ -147,16 +159,39 @@ body {
 }
 
 .cartao-servico {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid transparent;
 }
 
+/* Efeito ao passar o mouse por cima da janela */
 .cartao-servico:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 45, 84, 0.1);
+    border-bottom: 4px solid #002d54;
+}
+
+.icone-servico {
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.cartao-servico h3 {
+    font-size: 22px;
+    color: #002d54;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.cartao-servico p {
+    font-size: 15px;
+    color: #666;
+    line-height: 24px;
 }
 
 /* ===========================
