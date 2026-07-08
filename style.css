@@ -45,54 +45,42 @@ header .container{
     justify-content:space-between;
     align-items:center;
 }
-
-/* ===========================
-   BANNER PRINCIPAL (Ajustado para a Nova Logo)
+/* =========================== 
+   BANNER PRINCIPAL (Corrigido e Organizado) 
 =========================== */
 .banner {
     width: 100%;
     min-height: 80vh;
-    /* Usamos a nova logo como fundo, cobrindo todo o espaço */
-    background-image: url('logo.png');
-    background-position: center;
-    background-size: cover; /* Faz as gotinhas e o fundo azul cobrirem todo o banner */
-    background-repeat: no-repeat;
+    background: #003a70; /* Fundo azul sólido e profissional */
     display: flex;
     align-items: center;
     padding: 100px 0;
     position: relative;
 }
 
-/* Camada opcional: caso queira escurecer um pouquinho o fundo para o texto destacar ainda mais */
-.banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.15); /* Uma leve sombra sobre o fundo */
-    z-index: 1;
-}
-
-/* Garante que o texto do site fique bem visível acima do fundo */
+/* Container do Banner para alinhar os elementos lado a lado */
 .banner .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
     position: relative;
     z-index: 2;
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
 }
-/* Nova regra para reduzir e posicionar a mini logo no canto do texto */
-.mini-logo-banner {
-    max-width: 150px; /* Define o tamanho reduzido dela */
-    height: auto;
-    margin-bottom: 10px; /* Dá um espacinho entre ela e o título H1 abaixo */
-    display: block;
+
+/* Lado Esquerdo: Textos do Banner */
+.texto-banner {
+    width: 50%;
 }
 
 .texto-banner h1 {
     font-size: 54px;
     line-height: 64px;
     color: #ffffff;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .texto-banner p {
@@ -118,28 +106,10 @@ header .container{
 .botao-whatsapp:hover {
     transform: translateY(-4px);
 }
-}
 
-.botao-whatsapp{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:18px 42px;
-    background:#25D366;
-    color:#fff;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.botao-whatsapp:hover{
-    transform:translateY(-4px);
-}
-
-/* Nova regra: coloca a logo na direita e camufla as bordas dela com o fundo */
-.imagem-banner-vazia{
-    width:50%;
+/* Lado Direito: Espaço para a Logo Linda aparecer inteira */
+.imagem-banner-vazia {
+    width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,21 +118,13 @@ header .container{
 .imagem-banner-vazia img {
     max-width: 100%;
     height: auto;
-    opacity: 0.25; /* Deixa ela suave como marca d'água */
-    mix-blend-mode: screen; /* Remove o fundo escuro da imagem e deixa só o desenho da logo! */
+    border-radius: 20px; /* Deixa os cantos da imagem arredondados e elegantes */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2); /* Cria uma sombra suave atrás da logo */
 }
 
-.onda-inferior{
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:140px;
-    background:#0b6efd;
-    border-radius:100% 100% 0 0;
-}
-
-/* =========================== QUEM SOMOS =========================== */
+/* =========================== 
+   QUEM SOMOS 
+=========================== */
 .quem-somos {
     position: relative;
     padding: 80px 0;
@@ -200,15 +162,73 @@ header .container{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Fundo escurecido */
+    background: rgba(0, 0, 0, 0.6);
     z-index: 10000;
-    display: none; /* Esconde a janela */
+    display: none; 
     justify-content: center;
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
+.modal-quem-somos.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-conteudo {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 650px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    text-align: left;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal-quem-somos.ativo .modal-conteudo {
+    transform: scale(1);
+}
+
+.modal-conteudo h2 {
+    font-size: 32px;
+    color: #003a70;
+    margin-bottom: 20px;
+}
+
+.modal-conteudo p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-fechar-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f2f5fa;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #003a70;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.btn-fechar-modal:hover {
+    background: #e5e7eb;
+    color: #ff0000;
+}
 /* Quando a janela estiver aberta */
 .modal-quem-somos.ativo {
     display: flex;
