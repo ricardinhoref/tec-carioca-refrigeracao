@@ -29,7 +29,6 @@ body {
     color: white; 
 }
 
-/* Camada suave para criar o efeito de marca d'água */
 .banner::before {
     content: '';
     position: absolute;
@@ -72,8 +71,8 @@ body {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
-/* WHATSAPP FIXO NO CANTO INFERIOR DIREITO (Limpo, sem texto) */
-.botao-whatsapp-icone, .whatsapp-fixo {
+/* WHATSAPP FIXO NO CANTO INFERIOR DIREITO */
+.botao-whatsapp-icone {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -92,7 +91,7 @@ body {
     transition: .3s;
 }
 
-.botao-whatsapp-icone:hover, .whatsapp-fixo:hover {
+.botao-whatsapp-icone:hover {
     background-color: #1ebd59;
     transform: scale(1.1); 
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
@@ -113,16 +112,8 @@ body {
     margin-bottom: 20px;
 }
 
-.quem-somos p {
-    font-size: 18px;
-    line-height: 32px;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 /* ===========================
-   SERVIÇOS (As Janelas Modernas)
+   SERVIÇOS (Janelas com Fotos Modernas)
 =========================== */
 .servicos {
     padding: 80px 0;
@@ -137,7 +128,7 @@ body {
 .titulo-secao span {
     font-size: 14px;
     text-transform: uppercase;
-    color: #25D366;
+    color: #002d54;
     font-weight: 600;
     letter-spacing: 2px;
     display: block;
@@ -150,8 +141,7 @@ body {
     font-weight: 700;
 }
 
-/* Grade que organiza as 4 janelas lado a lado */
-.grade-servicos, .cards-servicos {
+.grade-servicos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
@@ -160,78 +150,89 @@ body {
     margin: 0 auto;
 }
 
-/* Estilo moderno de cada Janela de Serviço */
-.cartao-servico, .card-servico {
+/* Caixa do serviço moderna estilo Card */
+.cartao-servico {
     background: #ffffff;
-    padding: 40px 30px;
     border-radius: 12px;
+    overflow: hidden; /* Faz a foto respeitar a borda arredondada */
     box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-bottom: 4px solid transparent;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Efeito moderno ao passar o mouse por cima da janela */
-.cartao-servico:hover, .card-servico:hover {
+.cartao-servico:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 45, 84, 0.1);
-    border-bottom: 4px solid #002d54;
+    box-shadow: 0 12px 30px rgba(0, 45, 84, 0.15);
 }
 
-.icone-servico {
-    font-size: 40px;
-    margin-bottom: 20px;
-    display: inline-block;
+/* Container da Foto */
+.container-foto {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
 }
 
-.cartao-servico h3, .card-servico h3 {
-    font-size: 22px;
+.container-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+    transition: transform 0.5s ease;
+}
+
+.cartao-servico:hover .container-foto img {
+    transform: scale(1.1); /* Efeito de zoom na foto ao passar o mouse */
+}
+
+/* Textos dentro do Card */
+.info-cartao {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.info-cartao h3 {
+    font-size: 20px;
     color: #002d54;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-weight: 600;
 }
 
-.cartao-servico p, .card-servico p {
-    font-size: 15px;
+.info-cartao p {
+    font-size: 14px;
     color: #666;
-    line-height: 24px;
+    line-height: 22px;
 }
 
 /* ===========================
-   DIFERENCIAIS & OUTROS
+   CONTATO (Botão Central)
 =========================== */
-.diferenciais {
+.contato {
     padding: 80px 0;
     background: #ffffff;
+    text-align: center;
 }
 
-.cards-diferenciais {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+.botao-whatsapp.grande {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.card-diferencial {
-    background: #f4f7f6;
-    padding: 30px;
-    border-radius: 8px;
+.botao-whatsapp.grande:hover {
+    background-color: #1ebd59;
 }
 
 /* ===========================
-   RODAPÉ / CONTATO
+   RODAPÉ
 =========================== */
 footer {
     background-color: #002d54;
     color: white;
     padding: 40px 0;
     text-align: center;
-}
-
-footer .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
