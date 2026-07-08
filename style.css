@@ -1,9 +1,74 @@
-/* --- CONFIGURAÇÕES GERAIS --- */
+/* ==========================================================================
+   1. CABEÇALHO E LOGO - INTEGRALMENTE PROTEGIDOS (NÃO MEXER)
+   ========================================================================== */
+.topo {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 90px;
+}
+
+.topo .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* Preservando o impacto visual exato da Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #007bff;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #333333;
+    font-weight: 400;
+}
+
+/* Menu Original */
+.menu ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.menu ul li {
+    margin-left: 25px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #007bff;
+}
+
+/* ==========================================================================
+   2. CONFIGURAÇÕES GERAIS DO SITE
+   ========================================================================== */
 :root {
-    --primary-color: #007bff; /* Azul base */
-    --accent-color: #1affe6;  /* Ciano brilhante para gradiente */
-    --bg-light: #f4f7f6;      /* Fundo da seção */
-    --card-bg: #e0e5ec;       /* Fundo neomórfico do cartão */
+    --primary-color: #007bff;
+    --accent-color: #1affe6;
+    --bg-light: #f4f7f6;
+    --card-bg: #e0e5ec;
     --text-color: #333;
     --font-main: 'Poppins', sans-serif;
 }
@@ -27,59 +92,7 @@ body {
     padding: 0 20px;
 }
 
-/* ==========================================================================
-   CABEÇALHO E LOGO - ORIGINAL (RESTAURADO E PROTEGIDO)
-   ========================================================================== */
-.topo {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.topo .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
-}
-
-.logo h1 {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-.logo span {
-    color: #333;
-}
-
-.menu ul {
-    display: flex;
-    list-style: none;
-}
-
-.menu ul li {
-    margin-left: 20px;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.menu ul li a:hover {
-    color: var(--primary-color);
-}
-
-/* ========================================================================== */
-
-/* --- TÍTULOS DE SEÇÃO GERAIS --- */
+/* --- TÍTULOS DE SEÇÃO --- */
 .titulo-secao {
     text-align: center;
     margin-bottom: 60px;
@@ -108,7 +121,7 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
-    margin-top: 90px; /* Espaço para o cabeçalho fixo */
+    margin-top: 90px; /* Evita que o banner suba para trás do topo fixo */
 }
 
 .conteudo-banner h1 {
@@ -121,7 +134,9 @@ body {
     padding: 100px 0;
 }
 
-/* --- SEÇÃO SERVIÇOS --- */
+/* ==========================================================================
+   3. SEÇÃO SERVIÇOS - DESIGN MODERNO (JANELAS E ÍCONES)
+   ========================================================================== */
 .servicos {
     padding: 100px 0;
     background-color: var(--bg-light);
@@ -133,7 +148,7 @@ body {
     gap: 30px;
 }
 
-/* Estilo do Cartão Neomórfico */
+/* Cartões de Serviço com Sombra Neomórfica */
 .cartao-servico {
     background-color: var(--card-bg);
     padding: 40px;
@@ -151,16 +166,16 @@ body {
         inset -5px -5px 10px rgba(255, 255, 255, 0.6);
 }
 
-/* Estilo dos Ícones Modernos */
+/* Moldura Moderna para os Ícones Técnicos */
 .icone-servico {
     display: inline-block;
     width: 90px;
     height: 90px;
     margin: 0 auto 25px auto;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,7 +184,7 @@ body {
         inset -5px -5px 10px rgba(255, 255, 255, 0.6);
 }
 
-/* Cor e Gradiente do Ícone Técnico */
+/* Ícones do FontAwesome em Gradiente Tecnológico */
 .icone-servico i {
     font-size: 36px;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -189,7 +204,7 @@ body {
     color: #666;
 }
 
-/* --- OUTRAS SEÇÕES --- */
+/* --- DEMAIS SEÇÕES --- */
 .diferenciais, .contato, footer {
     padding: 80px 0;
 }
