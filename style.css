@@ -162,34 +162,113 @@ header .container{
     border-radius:100% 100% 0 0;
 }
 
-/* ===========================
-   QUEM SOMOS
-=========================== */
-.quem-somos{
-    position:relative;
-    padding:120px 0;
-    background:#ffffff;
-    z-index:2;
+/* =========================== QUEM SOMOS =========================== */
+.quem-somos {
+    position: relative;
+    padding: 80px 0;
+    background: #ffffff;
+    z-index: 2;
+    text-align: center;
 }
 
-.titulo-secao{
-    text-align:center;
-    margin-bottom:70px;
+/* Estilo do Botão para abrir a janela */
+.btn-abrir-sobre {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    background: #0b6efd;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: .3s;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.titulo-secao span{
-    color:#0b6efd;
-    font-size:18px;
-    font-weight:600;
-    text-transform:uppercase;
-    letter-spacing:2px;
+.btn-abrir-sobre:hover {
+    background: #0056c9;
+    transform: translateY(-2px);
 }
 
-.titulo-secao h2{
-    margin-top:15px;
-    font-size:46px;
-    color:#003a70;
-    font-weight:700;
+/* A JANELA MODAL (Escondida por padrão) */
+.modal-quem-somos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fundo escurecido */
+    z-index: 10000;
+    display: none; /* Esconde a janela */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Quando a janela estiver aberta */
+.modal-quem-somos.ativo {
+    display: flex;
+    opacity: 1;
+}
+
+/* Caixa interna da Janela */
+.modal-conteudo {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 650px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    text-align: left;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal-quem-somos.ativo .modal-conteudo {
+    transform: scale(1);
+}
+
+.modal-conteudo h2 {
+    font-size: 32px;
+    color: #003a70;
+    margin-bottom: 20px;
+}
+
+.modal-conteudo p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Botão de Fechar (X) */
+.btn-fechar-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f2f5fa;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #003a70;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.btn-fechar-modal:hover {
+    background: #e5e7eb;
+    color: #ff0000;
 }
 
 .conteudo-sobre{
