@@ -14,43 +14,19 @@ body {
 }
 
 /* ===========================
-   CABEÇALHO
-========================== */
-header {
-    background-color: #ffffff;
-    padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    position: relative;
-    z-index: 10;
-}
-
-header .container {
-    display: flex;
-    justify-content: center; /* Centraliza a logo no topo */
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-header .logo img {
-    max-height: 80px; /* Tamanho da logo no topo */
-}
-
-/* ===========================
-   BANNER PRINCIPAL (O layout original que você gostou!)
+   BANNER PRINCIPAL (A logo que você gosta como fundo)
 =========================== */
 .banner {
     width: 100%;
-    min-height: 80vh; /* Altura do banner */
-    background-image: url('logo.png'); /* Usa a sua logo como fundo */
+    min-height: 85vh; 
+    background-image: url('logo.png'); 
     background-position: center;
-    background-size: cover; /* Faz a logo cobrir todo o fundo */
+    background-size: cover; 
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     position: relative;
-    color: white; /* Cor do texto sobre o banner */
+    color: white; 
 }
 
 /* Camada escura para dar leitura aos textos */
@@ -61,30 +37,30 @@ header .logo img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Escurece o fundo para destacar o texto */
+    background-color: rgba(0, 0, 0, 0.45); 
     z-index: 1;
 }
 
 .banner .container {
     position: relative;
-    z-index: 2; /* Garante que o conteúdo fique sobre a camada escura */
+    z-index: 2; 
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center; 
 }
 
 /* Organização do conteúdo do banner */
 .conteudo-banner {
-    text-align: center; /* Centraliza o texto */
+    text-align: center; 
 }
 
 .banner h1 {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Sombra no texto para melhor leitura */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
     line-height: 58px;
 }
 
@@ -97,7 +73,7 @@ header .logo img {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
-/* BOTÃO DO WHATSAPP (A bolinha verde redonda) */
+/* BOTÃO DO WHATSAPP (Apenas a bolinha verde com o símbolo) */
 .botao-whatsapp-icone {
     display: inline-flex;
     align-items: center;
@@ -107,7 +83,7 @@ header .logo img {
     background-color: #25D366;
     color: #fff;
     text-decoration: none;
-    border-radius: 50%; /* Torna o botão redondo */
+    border-radius: 50%; 
     font-size: 35px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transition: .3s;
@@ -115,7 +91,7 @@ header .logo img {
 
 .botao-whatsapp-icone:hover {
     background-color: #1ebd59;
-    transform: translateY(-3px); /* Levanta o botão ao passar o mouse */
+    transform: translateY(-3px); 
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
