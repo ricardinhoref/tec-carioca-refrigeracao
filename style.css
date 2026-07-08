@@ -47,15 +47,13 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Versão Original Restaurada)
+   BANNER PRINCIPAL (Fundo liso corrigido, sem a tira escura)
 =========================== */
 .banner{
     width:100%;
     min-height:100vh;
-    background:linear-gradient(rgba(0,58,112,.85),rgba(0,58,112,.85)),url('logo.png');
-    background-position:center;
-    background-size:contain;
-    background-repeat:no-repeat;
+    /* Deixamos uma cor sólida de fundo única para sumir com qualquer tira ou divisão */
+    background-color: #003a70;
     display:flex;
     align-items:center;
     position:relative;
@@ -112,7 +110,6 @@ header .container{
     transform:translateY(-4px);
 }
 
-/* Mantém o alinhamento original do texto na esquerda */
 .imagem-banner-vazia{
     width:50%;
 }
