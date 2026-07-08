@@ -1,5 +1,5 @@
 /* ===========================
-   BANNER PRINCIPAL (Voltando ao que estava certo!)
+   BANNER PRINCIPAL (O que você gostou!)
 =========================== */
 .banner {
     width: 100%;
@@ -28,4 +28,37 @@
 .banner .container {
     position: relative;
     z-index: 2;
+}
+
+/* ===========================
+   QUEM SOMOS (Organizado para não ocupar espaço)
+=========================== */
+.quem-somos {
+    position: relative;
+    padding: 60px 0;
+    background: #ffffff;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Botão elegante para abrir a janela */
+.btn-abrir-sobre {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    background: #0b6efd;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: .3s;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-abrir-sobre:hover {
+    background: #0056c9;
+    transform: translateY(-2px);
 }
