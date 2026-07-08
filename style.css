@@ -47,16 +47,16 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Estilo Anterior Corrigido)
+   BANNER PRINCIPAL (Estilo que você gostou, sem o quadrado azul)
 =========================== */
 .banner{
     width:100%;
     min-height:100vh;
-    /* Voltamos ao fundo azul original com a logo centralizada sem repetições */
-    background: linear-gradient(rgba(0, 58, 112, 0.92), rgba(0, 58, 112, 0.92)), url('logo.png');
+    /* Mantém o fundo azul original com a logo centralizada que você curtiu */
+    background: linear-gradient(rgba(0, 58, 112, 0.90), rgba(0, 58, 112, 0.90)), url('logo.png');
     background-repeat: no-repeat;
-    background-position: center 30%; /* Posiciona a logo perfeitamente na parte superior */
-    background-size: 500px auto; /* Tamanho ideal para não criar faixas estranhas */
+    background-position: center center; 
+    background-size: 450px auto; 
     display:flex;
     align-items:center;
     position:relative;
@@ -66,14 +66,16 @@ header .container{
 .banner-container{
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    gap:70px;
+    justify-content:center; /* Centraliza o conteúdo no meio da tela */
+    text-align:center; /* Centraliza o texto para um visual mais elegante */
+    width:100%;
     position:relative;
     z-index:2;
 }
 
-.texto-banner{
-    width:50%;
+.texto-banner {
+    width: 100%;
+    max-width: 800px; /* Alarga o texto já que o botão do lado sumiu */
 }
 
 .texto-banner span{
@@ -111,16 +113,6 @@ header .container{
 
 .botao-whatsapp:hover{
     transform:translateY(-4px);
-}
-
-.imagem-banner{
-    width:50%;
-    text-align:right;
-}
-
-.imagem-banner img{
-    width:100%;
-    max-width:650px;
 }
 
 .onda-inferior{
@@ -327,11 +319,8 @@ footer p{
         flex-direction:column;
         text-align:center;
     }
-    .texto-banner, .imagem-banner, .texto-sobre{
+    .texto-banner, .texto-sobre{
         width:100%;
-    }
-    .imagem-banner{
-        text-align:center;
     }
     .conteudo-sobre{
         flex-direction:column;
