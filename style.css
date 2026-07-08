@@ -52,10 +52,9 @@ header .container{
 .banner {
     width: 100%;
     min-height: 80vh;
-    /* Mistura o azul sólido com a logo, esticando ela de lado a lado (cover) */
     background: linear-gradient(rgba(0, 58, 112, 0.92), rgba(0, 58, 112, 0.92)), url('logo.png');
     background-position: center;
-    background-size: cover; /* Faz a imagem cobrir o topo de ponta a ponta */
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -64,17 +63,19 @@ header .container{
 
 .texto-banner {
     width: 100%;
-    max-width: 700px; /* Mantém o texto protegido na esquerda */
+    max-width: 700px;
     position: relative;
     z-index: 3;
 }
 
-.texto-banner span {
-   mini-logo-banner 
-color: #0b6efd;  
-   font-size: 18px;   
-font-weight: 600;
+/* Nova regra para reduzir e posicionar a mini logo no canto do texto */
+.mini-logo-banner {
+    max-width: 150px; /* Define o tamanho reduzido dela */
+    height: auto;
+    margin-bottom: 10px; /* Dá um espacinho entre ela e o título H1 abaixo */
+    display: block;
 }
+
 .texto-banner h1 {
     font-size: 54px;
     line-height: 64px;
@@ -102,8 +103,9 @@ font-weight: 600;
     transition: .3s;
 }
 
-.botao-whatsapp :hover {
+.botao-whatsapp:hover {
     transform: translateY(-4px);
+}
 }
 
 .botao-whatsapp{
