@@ -47,22 +47,24 @@ body {
     color: #0b6efd;
 }
 
-<!-- BANNER PRINCIPAL -->
-<section class="banner">
-    <div class="container">
-        <div class="conteudo-banner">
-            <h1>Tecnologia e Confiança<br>Para o Seu Clima</h1>
-            <p>Sua solução completa em refrigeração e climatização no Rio de Janeiro.</p>
-            <!-- Botão Redondo com Símbolo do WhatsApp -->
-            <a href="https://wa.me/5521999999999" class="botao-whatsapp-icone" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
-    </div>
-</section>
+/* ===========================
+   BANNER PRINCIPAL (Marca d'água Perfeita)
+=========================== */
+.banner {
+    width: 100%;
+    min-height: 85vh;
+    background-image: url('logo.png');
+    background-position: center right 10%; /* Empurra a logo para a direita */
+    background-size: contain; /* Mantém a logo inteira sem cortar */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    position: relative;
+    background-color: #ffffff; 
 }
 
-/* Efeito de Marca d'água: clareia a imagem de fundo */
+/* Efeito Marca d'água suave no fundo */
 .banner::before {
     content: '';
     position: absolute;
@@ -70,57 +72,59 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(254, 254, 254, 0.45); /* Transparência suave */
+    background-color: rgba(255, 255, 255, 0.75); /* Deixa a logo bem clarinha ao fundo */
     z-index: 1;
 }
 
-/* Alinha o conteúdo na esquerda para deixar o centro da logo livre */
 .banner .container {
     position: relative;
     z-index: 2;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
+}
+
+/* Alinha todo o texto na esquerda para não cobrir o centro da logo */
+.conteudo-banner {
+    max-width: 550px; 
+    text-align: left;
 }
 
 .banner h1 {
-    font-size: 46px;
+    font-size: 44px;
     font-weight: 700;
     color: #002d54;
-    margin-bottom: 15px;
-    line-height: 56px;
+    margin-bottom: 20px;
+    line-height: 54px;
 }
 
 .banner p {
     font-size: 18px;
     color: #444;
-    margin-bottom: 30px;
-    max-width: 550px;
+    margin-bottom: 35px;
+    line-height: 28px;
 }
 
-/* BOTÃO DO WHATSAPP (Apenas o símbolo redondo verde) */
-.botao-whatsapp {
+/* BOTAO DO WHATSAPP (Apenas o símbolo redondo verde) */
+.botao-whatsapp-icone {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 65px;
     height: 65px;
     background-color: #25D366;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 50%; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    transition: .3s;
-    font-size: 35px; 
+    border-radius: 50%;
+    font-size: 35px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: .3s ease;
 }
 
-.botao-whatsapp:hover {
+.botao-whatsapp-icone:hover {
     background-color: #1ebd59;
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
 }
 
 /* ===========================
