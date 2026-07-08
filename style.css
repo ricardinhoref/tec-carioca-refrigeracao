@@ -52,22 +52,36 @@ header .container{
 .banner {
     width: 100%;
     min-height: 80vh;
-    background: linear-gradient(rgba(0, 58, 112, 0.92), rgba(0, 58, 112, 0.92)), url('logo.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* Fundo azul sólido puríssimo */
+    background-color: #003a70;
     display: flex;
     align-items: center;
     padding: 100px 0;
+    position: relative; /* Necessário para posicionar a marca d'água */
 }
 
-.texto-banner {
+/* Criamos um elemento novo apenas para a marca d'água, centralizada e suave */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 700px;
-    position: relative;
-    z-index: 3;
+    height: 100%;
+    background-image: url('logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; /* Faz a logo se ajustar ao tamanho do banner sem distorcer */
+    opacity: 0.1; /* Deixa ela BEM transparente */
+    mix-blend-mode: screen; /* Remove qualquer cor escura (incluindo o preto) e deixa só o desenho */
+    z-index: 1; /* Garante que ela fique atrás do texto */
 }
 
+/* Garante que o container de texto fique acima da marca d'água */
+.banner .container {
+    position: relative;
+    z-index: 2;
+}
 /* Nova regra para reduzir e posicionar a mini logo no canto do texto */
 .mini-logo-banner {
     max-width: 150px; /* Define o tamanho reduzido dela */
