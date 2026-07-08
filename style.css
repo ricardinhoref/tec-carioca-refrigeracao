@@ -47,12 +47,16 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Recomeço do Zero)
+   BANNER PRINCIPAL (Marca d'água de Ponta a Ponta)
 =========================== */
 .banner {
     width: 100%;
-    min-height: 80vh; /* Altura ideal e limpa */
-    background-color: #003a70; /* Cor azul sólida única (sem imagens e sem degradê) */
+    min-height: 80vh;
+    /* Mistura o azul sólido com a logo, esticando ela de lado a lado (cover) */
+    background: linear-gradient(rgba(0, 58, 112, 0.92), rgba(0, 58, 112, 0.92)), url('logo.png');
+    background-position: center;
+    background-size: cover; /* Faz a imagem cobrir o topo de ponta a ponta */
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     padding: 100px 0;
@@ -60,7 +64,9 @@ header .container{
 
 .texto-banner {
     width: 100%;
-    max-width: 700px; /* Mantém o texto bem estruturado na esquerda */
+    max-width: 700px; /* Mantém o texto protegido na esquerda */
+    position: relative;
+    z-index: 3;
 }
 
 .texto-banner span {
@@ -96,7 +102,7 @@ header .container{
     transition: .3s;
 }
 
-.botao-whatsapp:hover {
+.botao-whatsapp :hover {
     transform: translateY(-4px);
 }
 
