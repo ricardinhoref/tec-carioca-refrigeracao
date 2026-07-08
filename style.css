@@ -67,38 +67,33 @@ body{
    CABEÇALHO
 =========================== */
 
+/* ===========================
+   CABEÇALHO (Ajustado)
+=========================== */
+
 header{
-
-    position:absolute;
-
-    width:100%;
-
-    top:0;
-
-    left:0;
-
-    z-index:1000;
-
-    padding:25px 0;
-
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 30px 0; /* Aumentamos um pouco o espaço no topo */
 }
 
 header .container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo img{
-
-    width:240px;
-
+    width: 100%;
+    max-width: 200px; /* Tamanho ideal para não parecer gigante */
+    height: auto;
+    display: block;
+    /* Se a sua imagem tiver um fundo branco quadrado e você quiser tentar sumir com ele: */
+    mix-blend-mode: multiply; 
 }
-
 /* ===========================
    WHATSAPP
 =========================== */
