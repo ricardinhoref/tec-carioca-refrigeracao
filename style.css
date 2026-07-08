@@ -48,11 +48,12 @@ body {
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Com o Botão do WhatsApp de volta!)
+   BANNER PRINCIPAL (Marca d'água e layout limpo)
 =========================== */
 .banner {
     width: 100%;
     min-height: 80vh;
+    /* A imagem entra como um plano de fundo fixo e centrado */
     background-image: url('logo.png');
     background-position: center;
     background-size: cover; 
@@ -63,7 +64,7 @@ body {
     position: relative;
 }
 
-/* Camada escura para dar leitura aos textos */
+/* Efeito de Marca d'água: suaviza a imagem de fundo para dar leitura */
 .banner::before {
     content: '';
     position: absolute;
@@ -71,54 +72,57 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Escurecido para destacar o texto */
+    background-color: rgba(254, 254, 254, 0.35); /* Clarea o fundo criando o efeito marca d'água */
     z-index: 1;
 }
 
+/* Organização do conteúdo para não sobrepor o centro da logo */
 .banner .container {
     position: relative;
     z-index: 2;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o texto na esquerda, liberando o centro da logo */
 }
 
-/* Estilos dos textos dentro do Banner */
+/* Textos do Banner */
 .banner h1 {
-    font-size: 48px;
+    font-size: 46px;
     font-weight: 700;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    color: #002d54;
+    margin-bottom: 15px;
 }
 
 .banner p {
-    font-size: 20px;
+    font-size: 18px;
+    color: #444;
     margin-bottom: 30px;
-    max-width: 600px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    max-width: 550px;
 }
 
-/* O BOTÃO DO WHATSAPP REGENERADO */
+/* BOTÃO DO WHATSAPP (Apenas o símbolo redondo verde) */
 .botao-whatsapp {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 35px;
+    width: 60px;
+    height: 60px;
     background-color: #25D366;
     color: #fff;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 18px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 50%; /* Torna o botão perfeitamente redondo */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     transition: .3s;
+    font-size: 30px; /* Tamanho do ícone do Zap */
 }
 
 .botao-whatsapp:hover {
     background-color: #1ebd59;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transform: scale(1.1); /* Dá um leve zoom ao passar o mouse */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
 /* ===========================
