@@ -47,48 +47,57 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL
+   BANNER PRINCIPAL (Recomeço do Zero)
 =========================== */
-.banner{
-    width:100%;
-    min-height:100vh;
-    background-color: #003a70; /* Cor azul sólida e única */
-    display:flex;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-}
-.banner-container{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:70px;
-    position:relative;
-    z-index:2;
+.banner {
+    width: 100%;
+    min-height: 80vh; /* Altura ideal e limpa */
+    background-color: #003a70; /* Cor azul sólida única (sem imagens e sem degradê) */
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
 }
 
-.texto-banner{
-    width:50%;
+.texto-banner {
+    width: 100%;
+    max-width: 700px; /* Mantém o texto bem estruturado na esquerda */
 }
 
-.texto-banner span{
-    color:#0b6efd;
-    font-size:18px;
-    font-weight:600;
+.texto-banner span {
+    color: #0b6efd;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.texto-banner h1{
-    font-size:64px;
-    line-height:72px;
-    color:#ffffff;
-    margin:20px 0;
+.texto-banner h1 {
+    font-size: 54px;
+    line-height: 64px;
+    color: #ffffff;
+    margin: 20px 0;
 }
 
-.texto-banner p{
-    font-size:19px;
-    color:#e5e7eb;
-    line-height:34px;
-    margin-bottom:35px;
+.texto-banner p {
+    font-size: 18px;
+    color: #e5e7eb;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+.botao-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 42px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.botao-whatsapp:hover {
+    transform: translateY(-4px);
 }
 
 .botao-whatsapp{
