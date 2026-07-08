@@ -47,21 +47,20 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Marca d'água de canto a canto corrigida)
+   BANNER PRINCIPAL (Estilo Anterior Corrigido)
 =========================== */
 .banner{
     width:100%;
     min-height:100vh;
-    /* Deixamos o azul um pouquinho mais transparente (0.94) para a logo aparecer com elegância */
-    background: linear-gradient(rgba(0, 58, 112, 0.94), rgba(0, 58, 112, 0.94)), url('logo.png');
-    background-repeat: repeat; /* Faz a logo se repetir preenchendo todo o espaço, sem cortes */
-    background-position: center top; 
-    background-size: 350px auto; /* Define um tamanho excelente para as logos repetidas no fundo */
+    /* Voltamos ao fundo azul original com a logo centralizada sem repetições */
+    background: linear-gradient(rgba(0, 58, 112, 0.92), rgba(0, 58, 112, 0.92)), url('logo.png');
+    background-repeat: no-repeat;
+    background-position: center 30%; /* Posiciona a logo perfeitamente na parte superior */
+    background-size: 500px auto; /* Tamanho ideal para não criar faixas estranhas */
     display:flex;
     align-items:center;
     position:relative;
     overflow:hidden;
-    padding-top: 100px;
 }
 
 .banner-container{
