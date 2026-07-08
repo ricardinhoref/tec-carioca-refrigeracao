@@ -74,6 +74,7 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
+    margin-top: 90px;
 }
 
 .conteudo-banner h1 {
@@ -81,7 +82,80 @@ body {
     margin-bottom: 20px;
 }
 
-/* --- SEÇÕES DO SITE --- */
-.quem-somos, .servicos, .diferenciais, .contato {
+/* --- SEÇÃO QUEM SOMOS --- */
+.quem-somos {
     padding: 80px 0;
+}
+
+/* --- SEÇÃO SERVIÇOS ORIGINAL --- */
+.servicos {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.grade-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cartao-servico {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.icone-servico {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* --- DIFERENCIAIS --- */
+.diferenciais {
+    padding: 80px 0;
+}
+
+.cards-diferenciais {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card-diferencial {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    width: 48%;
+}
+
+/* --- CONTATO --- */
+.contato {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contato-box {
+    margin-top: 20px;
+}
+
+.botao-whatsapp {
+    display: inline-block;
+    background-color: #25d366;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
 }
