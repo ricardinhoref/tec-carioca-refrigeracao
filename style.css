@@ -27,6 +27,54 @@ body {
     padding: 0 20px;
 }
 
+/* --- CABEÇALHO E LOGO (SUA LOGO DE VOLTA) --- */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo span {
+    color: #333;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
 /* --- TÍTULOS DE SEÇÃO GERAIS --- */
 .titulo-secao {
     text-align: center;
@@ -56,6 +104,7 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
+    margin-top: 90px; /* Espaço para o cabeçalho fixo */
 }
 
 .conteudo-banner h1 {
@@ -68,10 +117,10 @@ body {
     padding: 100px 0;
 }
 
-/* --- SEÇÃO SERVIÇOS (Onde está a mágica!) --- */
+/* --- SEÇÃO SERVIÇOS --- */
 .servicos {
     padding: 100px 0;
-    background-color: var(--bg-light); /* Fundo limpo e moderno */
+    background-color: var(--bg-light);
 }
 
 .grade-servicos {
@@ -87,52 +136,42 @@ body {
     border-radius: 20px;
     text-align: center;
     transition: all 0.3s ease;
-    
-    /* Efeito Neomórfico Suave (Raise) */
     box-shadow: 
-        8px 8px 16px rgba(0, 0, 0, 0.05), /* Sombra suave escura */
-        -8px -8px 16px rgba(255, 255, 255, 0.8); /* Sombra brilhante clara */
+        8px 8px 16px rgba(0, 0, 0, 0.05),
+        -8px -8px 16px rgba(255, 255, 255, 0.8);
 }
 
-/* Efeito de Clique no Cartão */
 .cartao-servico:hover {
     box-shadow: 
         inset 5px 5px 10px rgba(0, 0, 0, 0.03),
         inset -5px -5px 10px rgba(255, 255, 255, 0.6);
 }
 
-/* --- Estilo dos Ícones Modernos --- */
+/* Estilo dos Ícones Modernos */
 .icone-servico {
     display: inline-block;
     width: 90px;
     height: 90px;
-    margin-bottom: 25px;
+    margin: 0 auto 25px auto;
     border-radius: 50%;
-    
-    /* Moldura de Vidro (Frosted Glass) */
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    
-    /* Alinhamento Central do Ícone */
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    /* Sombra Neomórfica Interna no Ícone */
     box-shadow: 
         inset 5px 5px 10px rgba(0, 0, 0, 0.03),
         inset -5px -5px 10px rgba(255, 255, 255, 0.6);
 }
 
-/* Cor e Gradiente do Ícone Técnico (FontAwesome) */
+/* Cor e Gradiente do Ícone Técnico */
 .icone-servico i {
     font-size: 36px;
-    /* Gradiente Moderno nos Ícones (Azul p/ Ciano) */
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: initial; /* Corrige renderização em alguns navegadores */
+    display: initial;
 }
 
 .info-cartao h3 {
@@ -146,7 +185,7 @@ body {
     color: #666;
 }
 
-/* --- OUTRAS SEÇÕES (Simplificadas para o exemplo) --- */
+/* --- OUTRAS SEÇÕES --- */
 .diferenciais, .contato, footer {
     padding: 80px 0;
 }
