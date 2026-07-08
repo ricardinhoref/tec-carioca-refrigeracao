@@ -46,17 +46,16 @@ body {
 .top-bar .social-links a:hover {
     color: #0b6efd;
 }
-
 /* ===========================
-   BANNER PRINCIPAL (Marca d'água e layout limpo)
+   BANNER PRINCIPAL (Ajustado para a Nova Logo)
 =========================== */
 .banner {
     width: 100%;
     min-height: 80vh;
-    /* A imagem entra como um plano de fundo fixo e centrado */
+    /* Usamos a nova logo como fundo, cobrindo todo o espaço */
     background-image: url('logo.png');
     background-position: center;
-    background-size: cover; 
+    background-size: cover; /* Faz as gotinhas e o fundo azul cobrirem todo o banner */
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
