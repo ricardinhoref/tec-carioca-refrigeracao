@@ -47,20 +47,19 @@ body {
     color: #0b6efd;
 }
 
-/* ===========================
-   BANNER PRINCIPAL (Marca d'água e layout limpo)
-=========================== */
-.banner {
-    width: 100%;
-    min-height: 80vh;
-    background-image: url('logo.png');
-    background-position: center;
-    background-size: cover; 
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    padding: 100px 0;
-    position: relative;
+<!-- BANNER PRINCIPAL -->
+<section class="banner">
+    <div class="container">
+        <div class="conteudo-banner">
+            <h1>Tecnologia e Confiança<br>Para o Seu Clima</h1>
+            <p>Sua solução completa em refrigeração e climatização no Rio de Janeiro.</p>
+            <!-- Botão Redondo com Símbolo do WhatsApp -->
+            <a href="https://wa.me/5521999999999" class="botao-whatsapp-icone" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</section>
 }
 
 /* Efeito de Marca d'água: clareia a imagem de fundo */
