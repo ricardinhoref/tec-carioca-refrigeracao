@@ -47,20 +47,21 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Marca d'água de canto a canto)
+   BANNER PRINCIPAL (Ajustado para não tampar a logo)
 =========================== */
 .banner{
     width:100%;
     min-height:100vh;
-    /* Ajustamos o tom do azul para dar mais destaque à imagem de fundo */
-    background: linear-gradient(rgba(0, 58, 112, 0.85), rgba(0, 58, 112, 0.85)), url('logo.png');
+    /* Camada de cor azul ajustada */
+    background: linear-gradient(rgba(0, 58, 112, 0.88), rgba(0, 58, 112, 0.88)), url('logo.png');
     background-repeat: no-repeat;
-    background-position: center center; 
-    background-size: cover; /* Faz a logo cobrir o topo de canto a canto */
+    background-position: center top; /* Força a logo a começar exatamente do topo */
+    background-size: contain; /* Ajusta para a logo inteira aparecer sem cortes nas laterais */
     display:flex;
     align-items:center;
     position:relative;
     overflow:hidden;
+    padding-top: 140px; /* Cria uma folga no topo para o texto não subir em cima da marca d'água */
 }
 
 .banner-container{
