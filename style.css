@@ -1,78 +1,4 @@
-/* ==========================================================================
-   1. CABEÇALHO E LOGO - INTEGRALMENTE PROTEGIDOS (NÃO MEXER)
-   ========================================================================== */
-.topo {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    height: 90px;
-}
-
-.topo .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-/* Preservando o impacto visual exato da Logo */
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo h1 {
-    font-size: 28px;
-    font-weight: 800;
-    color: #007bff;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-}
-
-.logo span {
-    color: #333333;
-    font-weight: 400;
-}
-
-/* Menu Original */
-.menu ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-.menu ul li {
-    margin-left: 25px;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.menu ul li a:hover {
-    color: #007bff;
-}
-
-/* ==========================================================================
-   2. CONFIGURAÇÕES GERAIS DO SITE
-   ========================================================================== */
-:root {
-    --primary-color: #007bff;
-    --accent-color: #1affe6;
-    --bg-light: #f4f7f6;
-    --card-bg: #e0e5ec;
-    --text-color: #333;
-    --font-main: 'Poppins', sans-serif;
-}
-
+/* --- CONFIGURAÇÕES GERAIS DO SITE --- */
 * {
     margin: 0;
     padding: 0;
@@ -80,8 +6,8 @@
 }
 
 body {
-    font-family: var(--font-main);
-    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
     background-color: #fff;
     line-height: 1.6;
 }
@@ -92,25 +18,52 @@ body {
     padding: 0 20px;
 }
 
-/* --- TÍTULOS DE SEÇÃO --- */
-.titulo-secao {
-    text-align: center;
-    margin-bottom: 60px;
+/* --- SEU CABEÇALHO E LOGO ORIGINAL (FIXADOS E PADRONIZADOS) --- */
+.topo {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-.titulo-secao span {
-    color: var(--primary-color);
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 2px;
+.topo .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
 }
 
-.titulo-secao h2 {
-    font-size: 36px;
+.logo h1 {
+    font-size: 24px;
     font-weight: 700;
-    color: #222;
-    margin-top: 10px;
+    color: #007bff; /* Azul padrão */
+}
+
+.logo span {
+    color: #333;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #007bff;
 }
 
 /* --- BANNER PRINCIPAL --- */
@@ -121,7 +74,6 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
-    margin-top: 90px; /* Evita que o banner suba para trás do topo fixo */
 }
 
 .conteudo-banner h1 {
@@ -129,82 +81,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* --- SEÇÃO QUEM SOMOS --- */
-.quem-somos {
-    padding: 100px 0;
-}
-
-/* ==========================================================================
-   3. SEÇÃO SERVIÇOS - DESIGN MODERNO (JANELAS E ÍCONES)
-   ========================================================================== */
-.servicos {
-    padding: 100px 0;
-    background-color: var(--bg-light);
-}
-
-.grade-servicos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-/* Cartões de Serviço com Sombra Neomórfica */
-.cartao-servico {
-    background-color: var(--card-bg);
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 
-        8px 8px 16px rgba(0, 0, 0, 0.05),
-        -8px -8px 16px rgba(255, 255, 255, 0.8);
-}
-
-.cartao-servico:hover {
-    box-shadow: 
-        inset 5px 5px 10px rgba(0, 0, 0, 0.03),
-        inset -5px -5px 10px rgba(255, 255, 255, 0.6);
-}
-
-/* Moldura Moderna para os Ícones Técnicos */
-.icone-servico {
-    display: inline-block;
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 25px auto;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 
-        inset 5px 5px 10px rgba(0, 0, 0, 0.03),
-        inset -5px -5px 10px rgba(255, 255, 255, 0.6);
-}
-
-/* Ícones do FontAwesome em Gradiente Tecnológico */
-.icone-servico i {
-    font-size: 36px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: initial;
-}
-
-.info-cartao h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #222;
-}
-
-.info-cartao p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* --- DEMAIS SEÇÕES --- */
-.diferenciais, .contato, footer {
+/* --- SEÇÕES DO SITE --- */
+.quem-somos, .servicos, .diferenciais, .contato {
     padding: 80px 0;
 }
