@@ -47,12 +47,11 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Estilo que você gostou, sem o quadrado azul)
+   BANNER PRINCIPAL (Visual original restaurado e limpo)
 =========================== */
 .banner{
     width:100%;
     min-height:100vh;
-    /* Mantém o fundo azul original com a logo centralizada que você curtiu */
     background: linear-gradient(rgba(0, 58, 112, 0.90), rgba(0, 58, 112, 0.90)), url('logo.png');
     background-repeat: no-repeat;
     background-position: center center; 
@@ -66,16 +65,14 @@ header .container{
 .banner-container{
     display:flex;
     align-items:center;
-    justify-content:center; /* Centraliza o conteúdo no meio da tela */
-    text-align:center; /* Centraliza o texto para um visual mais elegante */
-    width:100%;
+    justify-content:space-between;
+    gap:70px;
     position:relative;
     z-index:2;
 }
 
-.texto-banner {
-    width: 100%;
-    max-width: 800px; /* Alarga o texto já que o botão do lado sumiu */
+.texto-banner{
+    width:50%;
 }
 
 .texto-banner span{
@@ -113,6 +110,12 @@ header .container{
 
 .botao-whatsapp:hover{
     transform:translateY(-4px);
+}
+
+/* Bloco invisível apenas para segurar o espaço e manter o texto no lugar original */
+.imagem-banner-limpa{
+    width:50%;
+    background: transparent;
 }
 
 .onda-inferior{
@@ -319,7 +322,7 @@ footer p{
         flex-direction:column;
         text-align:center;
     }
-    .texto-banner, .texto-sobre{
+    .texto-banner, .imagem-banner-limpa, .texto-sobre{
         width:100%;
     }
     .conteudo-sobre{
