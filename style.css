@@ -47,17 +47,19 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Marca d'água de Ponta a Ponta)
+   BANNER PRINCIPAL (Corrigido para Mosaico de Marca d'água)
 =========================== */
 .banner {
     width: 100%;
     min-height: 80vh;
-    /* Fundo azul sólido puríssimo */
-    background-color: #003a70;
+    /* Mistura o azul sólido com a logo, criando um padrão repetitivo (mosaico) suave */
+    background: linear-gradient(rgba(0, 58, 112, 0.94), rgba(0, 58, 112, 0.94)), url('logo.png');
+    background-position: center;
+    background-size: 150px auto; /* Define um tamanho fixo para as mini-logos do mosaico, evitando que estiquem */
+    background-repeat: repeat; /* Faz a logo se repetir por todo o fundo */
     display: flex;
     align-items: center;
     padding: 100px 0;
-    position: relative; /* Necessário para posicionar a marca d'água */
 }
 
 /* Criamos um elemento novo apenas para a marca d'água, centralizada e suave */
