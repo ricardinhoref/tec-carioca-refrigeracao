@@ -4,7 +4,6 @@
 *{
     margin:0;
     padding:0;
-    box-box:border-box;
     box-sizing: border-box;
 }
 
@@ -38,7 +37,7 @@ header{
     top:0;
     left:0;
     z-index:1000;
-    padding:25px 0;
+    padding:20px 0;
 }
 
 header .container{
@@ -48,12 +47,16 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Fundo Azul Escuro)
+   BANNER PRINCIPAL (Com Marca d'água no fundo azul)
 =========================== */
 .banner{
     width:100%;
     min-height:100vh;
-    background:#003a70; /* Azul escuro destaca a logo branca */
+    /* Combina a cor azul escura com a imagem da logo bem clarinha ao fundo */
+    background: linear-gradient(rgba(0, 58, 112, 0.92), rgba(0, 58, 112, 0.92)), url('logo.png');
+    background-repeat: no-repeat;
+    background-position: center 25%; /* Centraliza a logo na parte superior do banner */
+    background-size: 450px auto; /* Define um tamanho elegante para a marca d'água */
     display:flex;
     align-items:center;
     position:relative;
@@ -82,13 +85,13 @@ header .container{
 .texto-banner h1{
     font-size:64px;
     line-height:72px;
-    color:#ffffff; /* Texto branco para ler no fundo azul */
+    color:#ffffff;
     margin:20px 0;
 }
 
 .texto-banner p{
     font-size:19px;
-    color:#e5e7eb; /* Texto claro */
+    color:#e5e7eb;
     line-height:34px;
     margin-bottom:35px;
 }
@@ -176,11 +179,6 @@ header .container{
     line-height:34px;
     color:#555;
     margin-bottom:25px;
-}
-
-.imagem-sobre{
-    width:45%;
-    text-align:center;
 }
 
 /* ===========================
@@ -329,7 +327,7 @@ footer p{
         flex-direction:column;
         text-align:center;
     }
-    .texto-banner, .imagem-banner, .texto-sobre, .imagem-sobre{
+    .texto-banner, .imagem-banner, .texto-sobre{
         width:100%;
     }
     .imagem-banner{
@@ -364,6 +362,9 @@ footer p{
     }
     .botao-whatsapp{
         width:100%;
+    }
+    .banner{
+        background-size: 300px auto; /* Logo menor em telas de celular */
     }
 }
 
