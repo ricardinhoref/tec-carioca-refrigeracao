@@ -47,13 +47,12 @@ header .container{
 }
 
 /* ===========================
-   BANNER PRINCIPAL (Fundo liso corrigido, sem a tira escura)
+   BANNER PRINCIPAL (Corrigido o degradê da própria imagem)
 =========================== */
 .banner{
     width:100%;
     min-height:100vh;
-    /* Deixamos uma cor sólida de fundo única para sumir com qualquer tira ou divisão */
-    background-color: #003a70;
+    background-color: #003a70; /* Fundo azul escuro totalmente liso */
     display:flex;
     align-items:center;
     position:relative;
@@ -110,8 +109,19 @@ header .container{
     transform:translateY(-4px);
 }
 
+/* Nova regra: coloca a logo na direita e camufla as bordas dela com o fundo */
 .imagem-banner-vazia{
     width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-banner-vazia img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.25; /* Deixa ela suave como marca d'água */
+    mix-blend-mode: screen; /* Remove o fundo escuro da imagem e deixa só o desenho da logo! */
 }
 
 .onda-inferior{
