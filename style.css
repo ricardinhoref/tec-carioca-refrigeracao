@@ -18,10 +18,15 @@
     justify-content: center;
 }
 
-.logo-centralizada {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.logo-de-canto-a-canto img, 
+.logo-area img,
+.logo-centralizada img {
+    width: auto !important;      /* Impede que o navegador estique a largura */
+    max-width: 100% !important;  /* Garante que ela caiba na tela */
+    height: 90px !important;     /* Define uma altura fixa e perfeita */
+    object-fit: contain !important; /* Força a proporção correta do Cristo e do floco */
+    display: block;
+    margin: 0 auto;
 }
 
 .logo-centralizada img {
