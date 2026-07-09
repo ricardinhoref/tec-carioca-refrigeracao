@@ -1,4 +1,4 @@
-/* --- CABEÇALHO COMPLETO E CORRIGIDO --- */
+/* --- CABEÇALHO COMPLETO E PROPORCIONAL --- */
 .topo {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -7,52 +7,22 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
-.container-topo {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-centralizada {
+.logo-de-canto-a-canto {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centraliza a logo na tela sem esticar */
 }
 
-.logo-centralizada img {
-    max-width: 100%;
-    height: auto; /* Isso impede que a imagem fique achatada */
+.logo-de-canto-a-canto img {
+    max-width: 90%; /* Ocupa quase a tela toda nas laterais */
+    height: auto;    /* ISSO IMPEDE DE ACHATAR A LOGO */
     display: block;
 }
 
-.menu ul {
-    display: flex;
-    list-style: none;
-}
-
-.menu ul li {
-    margin: 0 15px;
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.menu ul li a:hover {
-    color: #007bff;
-}
-
-/* Ajuste do espaço do banner para dar espaço ao novo cabeçalho duplo */
+/* Ajuste do espaço do banner abaixo do topo */
 .banner {
     height: 80vh;
     background-color: #333;
@@ -60,5 +30,5 @@
     display: flex;
     align-items: center;
     text-align: center;
-    margin-top: 180px; /* Abriu espaço para a logo e o menu não cobrirem o texto */
+    margin-top: 160px; /* Dá o espaço correto para a logo não cobrir o texto */
 }
