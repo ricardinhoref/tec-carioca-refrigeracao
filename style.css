@@ -1,4 +1,4 @@
-/* --- CABEÇALHO COMPLETO E PROPORCIONAL --- */
+/* --- CABEÇALHO CENTRALIZADO E PROPORCIONAL --- */
 .topo {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -7,22 +7,22 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .logo-de-canto-a-canto {
     width: 100%;
     display: flex;
-    justify-content: center; /* Centraliza a logo na tela sem esticar */
+    justify-content: center; /* Centraliza a logo perfeitamente */
 }
 
 .logo-de-canto-a-canto img {
-    max-width: 90%; /* Ocupa quase a tela toda nas laterais */
-    height: auto;    /* ISSO IMPEDE DE ACHATAR A LOGO */
+    width: 350px;       /* Tamanho ideal para a logo ficar imponente, mas sem estourar */
+    height: auto;        /* Mantém a proporção perfeita do Cristo e do floco de neve */
     display: block;
 }
 
-/* Ajuste do espaço do banner abaixo do topo */
+/* Ajuste do espaço do banner para o site começar logo abaixo do topo */
 .banner {
     height: 80vh;
     background-color: #333;
@@ -30,5 +30,5 @@
     display: flex;
     align-items: center;
     text-align: center;
-    margin-top: 160px; /* Dá o espaço correto para a logo não cobrir o texto */
+    margin-top: 110px; /* Espaço exato para o topo não cobrir o seu banner */
 }
