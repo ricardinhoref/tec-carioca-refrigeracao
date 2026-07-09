@@ -1,109 +1,39 @@
-/* --- CONFIGURAÇÕES GERAIS --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-h3 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #000;
-}
-
-/* --- CABEÇALHO --- */
+/* --- CABEÇALHO CORRIGIDO E SEM DISTORÇÃO --- */
 .topo {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-}
-
-/* Faixa Branca da Logo - Garantindo a proporção */
-.header-branco {
-    background-color: #fff;
     padding: 15px 0;
 }
 
-.logo-area {
+.container-topo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: center;
 }
 
-.logo-area img {
-    max-height: 110px; /* Limite seguro para não estourar */
-    width: auto;        /* MANTÉM A PROPORÇÃO EXATA */
+.logo-centralizada {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-centralizada img {
+    max-width: 90%;
+    height: 120px;       /* Mantém a logo grande e imponente */
+    object-fit: contain; /* ISSO IMPEDE A IMAGEM DE ACHATAR OU ESTICAR */
     display: block;
 }
 
-/* Faixa Escura dos Contatos */
-.header-preto {
-    background-color: #2c2c2c;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-.header-preto h2 {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.contato-rapido {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.contato-rapido img {
-    height: 30px;
-    width: auto;
-}
-
-.contato-rapido p {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* --- SEÇÃO QUEM SOMOS --- */
+/* Espaço exato para o resto do site começar abaixo da logo */
 .quem-somos {
     background-color: #fff;
-    padding: 60px 0;
-    margin-top: 190px; /* Dá espaço para o cabeçalho fixo */
+    padding: 80px 0;
+    margin-top: 160px;   /* Empurra o texto para baixo da logo fixada */
 }
-
-/* --- SEÇÃO SERVIÇOS --- */
-.servicos {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-}
-
-.servicos-grade {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.servico-item {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* ... (demais estilos do site) ... */
