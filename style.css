@@ -1,4 +1,4 @@
-/* --- PROGRAMAÇÃO DO NOVO TOPO --- */
+/* --- PROGRAMAÇÃO CORRETA DO CABEÇALHO --- */
 .topo {
     position: fixed;
     width: 100%;
@@ -9,17 +9,18 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.logo-topo {
+.logo-de-canto-a-canto {
     width: 100%;
     display: flex;
-    justify-content: center;
-    padding: 15px 0;
+    justify-content: center; /* Centraliza a logo no espaço em branco */
+    padding: 10px 0;
 }
 
-.logo-topo img {
-    max-width: 90%;
-    height: 90px; /* Define uma altura fixa para a imagem não estourar */
-    object-fit: contain; /* Garante que a imagem mantenha a proporção perfeita */
+.logo-de-canto-a-canto img {
+    max-width: 100%;
+    height: auto;        /* IMPEDE A IMAGEM DE ACHATAR OU DISTORCER */
+    max-height: 110px;   /* Define um limite seguro para o Cristo e o floco de neve */
+    object-fit: contain; /* Garante a proporção exata da sua arte original */
     display: block;
 }
 
@@ -30,41 +31,9 @@
     text-align: center;
 }
 
-.container-faixa {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.container-faixa h2 {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.contato-rapido {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.contato-rapido img {
-    height: 24px;
-    width: auto;
-}
-
-.contato-rapido span {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-/* --- AJUSTE DA SEÇÃO SEGUINTE (QUEM SOMOS) --- */
+/* Ajuste para o conteúdo do site não sumir atrás do topo fixo */
 .quem-somos {
     background-color: #fff;
     padding: 60px 0;
-    margin-top: 220px; /* Empurra o site para baixo para não sumir atrás do topo fixo */
+    margin-top: 240px; 
 }
