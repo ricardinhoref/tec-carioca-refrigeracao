@@ -1,39 +1,109 @@
-/* --- PROGRAMAÇÃO CORRETA DO CABEÇALHO --- */
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+/* --- CABEÇALHO --- */
 .topo {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+}
+
+/* Faixa Branca da Logo - Garantindo a proporção */
+.header-branco {
     background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
 }
 
-.logo-de-canto-a-canto {
-    width: 100%;
+.logo-area {
     display: flex;
-    justify-content: center; /* Centraliza a logo no espaço em branco */
-    padding: 10px 0;
+    justify-content: center;
 }
 
-.logo-de-canto-a-canto img {
-    max-width: 100%;
-    height: auto;        /* IMPEDE A IMAGEM DE ACHATAR OU DISTORCER */
-    max-height: 110px;   /* Define um limite seguro para o Cristo e o floco de neve */
-    object-fit: contain; /* Garante a proporção exata da sua arte original */
+.logo-area img {
+    max-height: 110px; /* Limite seguro para não estourar */
+    width: auto;        /* MANTÉM A PROPORÇÃO EXATA */
     display: block;
 }
 
-.faixa-preta {
+/* Faixa Escura dos Contatos */
+.header-preto {
     background-color: #2c2c2c;
     color: #fff;
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
-/* Ajuste para o conteúdo do site não sumir atrás do topo fixo */
+.header-preto h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contato-rapido {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contato-rapido img {
+    height: 30px;
+    width: auto;
+}
+
+.contato-rapido p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* --- SEÇÃO QUEM SOMOS --- */
 .quem-somos {
     background-color: #fff;
     padding: 60px 0;
-    margin-top: 240px; 
+    margin-top: 190px; /* Dá espaço para o cabeçalho fixo */
 }
+
+/* --- SEÇÃO SERVIÇOS --- */
+.servicos {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.servicos-grade {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.servico-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* ... (demais estilos do site) ... */
