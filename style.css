@@ -1,7 +1,24 @@
-/* --- RESOLUÇÃO DEFINITIVA DO CABEÇALHO --- */
+/* --- LIMPEZA E CONFIGURAÇÃO COMPLETA DO SITE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- TOPO FIXO EXATAMENTE IGUAL AO PRINT --- */
 .topo {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
@@ -9,37 +26,149 @@
     z-index: 1000;
 }
 
-/* Garante que o container impeça a imagem de estourar */
-.logo-de-canto-a-canto {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
-
-/* Força a imagem a voltar ao formato normal de fábrica */
-.logo-de-canto-a-canto img {
-    width: auto !important;
-    max-width: 100% !important;
-    height: 90px !important;       /* Altura perfeita para o Cristo e o floco */
-    object-fit: contain !important; /* Trava a proporção original da sua arte */
-    display: block;
-}
-
-/* Estilo da barra escura de texto */
-.faixa-preta {
-    background-color: #2c2c2c;
+/* Faixa escura superior */
+.header-preto {
+    background-color: #262626;
     color: #fff;
-    padding: 15px 0;
     text-align: center;
-    font-weight: bold;
-    font-size: 20px;
+    padding: 15px 0;
+}
+
+.header-preto h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
-/* Abre o espaço correto para o resto do site não sumir embaixo do topo */
-.quem-somos, #sobre {
-    margin-top: 190px !important; 
+/* Faixa branca da Logo com Proporção Destravada */
+.header-branco {
+    background-color: #ffffff;
+    padding: 10px 0;
+    border-bottom: 5px solid #262626;
+}
+
+.logo-area {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-area img {
+    height: 100px !important;    /* Força a altura correta do Cristo e do floco */
+    width: auto !important;      /* DESTRAVA A LARGURA PARA NÃO ACHATAR */
+    display: block;
+}
+
+/* --- CONTEÚDO ABAIXO DO TOPO --- */
+.quem-somos {
+    background-color: #ffffff;
+    padding: 60px 0;
+    margin-top: 210px; /* Abre espaço exato para as duas faixas do topo */
+}
+
+.quem-somos h3 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.quem-somos p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* --- SEÇÃO SERVIÇOS EM 4 COLUNAS --- */
+.servicos {
+    padding: 60px 0;
+}
+
+.servicos h3 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+
+.servicos-grade {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.servico-item {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.servico-item img {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.servico-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* --- DIFERENCIAIS E ORÇAMENTO (LADO A LADO) --- */
+.diferenciais-orcamento {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.diferencial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.diferenciais-texto ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.diferenciais-texto li {
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.diferenciais-texto li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+}
+
+.orcamento-box {
+    text-align: center;
+}
+
+.orcamento-box p {
+    margin: 15px 0 25px 0;
+}
+
+.botao-orcamento {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: #262626;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
 }
