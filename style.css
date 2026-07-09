@@ -1,4 +1,4 @@
-/* --- CABEÇALHO CORRIGIDO E SEM DISTORÇÃO --- */
+/* --- RESOLUÇÃO DEFINITIVA DO CABEÇALHO --- */
 .topo {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -7,38 +7,39 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 15px 0;
 }
 
-.container-topo {
+/* Garante que o container impeça a imagem de estourar */
+.logo-de-canto-a-canto {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     justify-content: center;
+    padding: 10px 0;
 }
 
-.logo-de-canto-a-canto img, 
-.logo-area img,
-.logo-centralizada img {
-    width: auto !important;      /* Impede que o navegador estique a largura */
-    max-width: 100% !important;  /* Garante que ela caiba na tela */
-    height: 90px !important;     /* Define uma altura fixa e perfeita */
-    object-fit: contain !important; /* Força a proporção correta do Cristo e do floco */
-    display: block;
-    margin: 0 auto;
-}
-
-.logo-centralizada img {
-    max-width: 90%;
-    height: 120px;       /* Mantém a logo grande e imponente */
-    object-fit: contain; /* ISSO IMPEDE A IMAGEM DE ACHATAR OU ESTICAR */
+/* Força a imagem a voltar ao formato normal de fábrica */
+.logo-de-canto-a-canto img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: 90px !important;       /* Altura perfeita para o Cristo e o floco */
+    object-fit: contain !important; /* Trava a proporção original da sua arte */
     display: block;
 }
 
-/* Espaço exato para o resto do site começar abaixo da logo */
-.quem-somos {
-    background-color: #fff;
-    padding: 80px 0;
-    margin-top: 160px;   /* Empurra o texto para baixo da logo fixada */
+/* Estilo da barra escura de texto */
+.faixa-preta {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/* Abre o espaço correto para o resto do site não sumir embaixo do topo */
+.quem-somos, #sobre {
+    margin-top: 190px !important; 
 }
