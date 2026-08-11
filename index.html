@@ -42,7 +42,7 @@
             border-bottom: 3px solid #38bdf8;
         }
 
-        /* Estilos dos Ícones de Destaque */
+        /* Estilos dos Ícones de Destaque com SVG */
         .icon-badge {
             width: 65px;
             height: 65px;
@@ -52,9 +52,18 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
             margin-bottom: 15px;
             box-shadow: 0 6px 15px rgba(2, 132, 199, 0.3);
+        }
+
+        .icon-badge svg {
+            width: 30px;
+            height: 30px;
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
         /* Botão Principal do WhatsApp */
@@ -70,15 +79,16 @@
             text-decoration: none;
             border-radius: 50px;
             border: none;
-            box-shadow: none;
-            transition: opacity 0.2s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: opacity 0.2s ease, transform 0.2s ease;
         }
 
         .btn-whatsapp-main:hover {
-            opacity: 0.9;
+            opacity: 0.95;
+            transform: translateY(-2px);
         }
 
-        /* Cartões Modernos */
+        /* Cartões Modernos com Bordas e Sombras Suaves */
         .card-hover {
             background: #ffffff;
             border: 1px solid #bae6fd;
@@ -93,7 +103,7 @@
             box-shadow: 0 12px 30px rgba(2, 132, 199, 0.15) !important;
         }
 
-        /* Tags de Regiões */
+        /* Tags de Regiões com Ícone Moderno */
         .region-tag {
             background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
             padding: 18px 15px;
@@ -108,7 +118,17 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.03);
         }
 
-        /* FAQ */
+        .region-tag svg {
+            width: 20px;
+            height: 20px;
+            stroke: #0284c7;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Estilo Sanfona/Accordion para FAQ */
         details {
             background: #ffffff;
             border: 1px solid #bae6fd;
@@ -140,14 +160,17 @@
         }
 
         summary::after {
-            content: '▼';
-            font-size: 0.8rem;
-            color: #0284c7;
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #0284c7;
+            border-bottom: 2px solid #0284c7;
+            transform: rotate(45deg);
             transition: transform 0.2s ease;
         }
 
         details[open] summary::after {
-            transform: rotate(180deg);
+            transform: rotate(-135deg);
         }
 
         details p {
@@ -168,18 +191,18 @@
             color: #ffffff;
             border-radius: 50px;
             text-align: center;
-            font-size: 30px;
             z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: opacity 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            transition: opacity 0.2s ease, transform 0.2s ease;
         }
 
         .whatsapp-float:hover {
-            opacity: 0.9;
+            opacity: 0.95;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -207,19 +230,25 @@
 
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; text-align: center;">
             <div class="card-hover" style="flex: 1; min-width: 220px; padding: 25px 15px;">
-                <div class="icon-badge">👨‍🔧</div>
+                <div class="icon-badge">
+                    <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </div>
                 <h4 style="margin: 0 0 8px 0; color: #0c4a6e; font-size: 1.15rem;">Técnicos Experientes</h4>
                 <p style="color: #64748b; font-size: 0.92rem; margin: 0; line-height: 1.4;">Serviço técnico qualificado e dentro das normas.</p>
             </div>
             
             <div class="card-hover" style="flex: 1; min-width: 220px; padding: 25px 15px;">
-                <div class="icon-badge">⚡</div>
+                <div class="icon-badge">
+                    <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
                 <h4 style="margin: 0 0 8px 0; color: #0c4a6e; font-size: 1.15rem;">Atendimento Rápido</h4>
                 <p style="color: #64748b; font-size: 0.92rem; margin: 0; line-height: 1.4;">Agilidade no diagnóstico e na execução do serviço.</p>
             </div>
 
             <div class="card-hover" style="flex: 1; min-width: 220px; padding: 25px 15px;">
-                <div class="icon-badge">🛡️</div>
+                <div class="icon-badge">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                </div>
                 <h4 style="margin: 0 0 8px 0; color: #0c4a6e; font-size: 1.15rem;">Garantia de Serviço</h4>
                 <p style="color: #64748b; font-size: 0.92rem; margin: 0; line-height: 1.4;">Tranquilidade e transparência em todos os orçamentos.</p>
             </div>
@@ -232,25 +261,33 @@
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
             <div class="card-hover" style="padding: 30px 20px; text-align: center;">
-                <div class="icon-badge">❄️</div>
+                <div class="icon-badge">
+                    <svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><line x1="20" y1="12" x2="4" y2="12"/><line x1="17.66" y1="6.34" x2="6.34" y2="17.66"/><line x1="17.66" y1="17.66" x2="6.34" y2="6.34"/></svg>
+                </div>
                 <h3 style="color: #0c4a6e; margin: 0 0 10px 0; font-size: 1.25rem;">Instalação de Ar-Condicionado</h3>
                 <p style="color: #475569; font-size: 0.95rem; line-height: 1.5; margin: 0;">Instalação técnica e segura de modelos Split, Inverter e de Janela, seguindo todas as normas do fabricante.</p>
             </div>
 
             <div class="card-hover" style="padding: 30px 20px; text-align: center;">
-                <div class="icon-badge">🔧</div>
+                <div class="icon-badge">
+                    <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </div>
                 <h3 style="color: #0c4a6e; margin: 0 0 10px 0; font-size: 1.25rem;">Manutenção Preventiva e Corretiva</h3>
                 <p style="color: #475569; font-size: 0.95rem; line-height: 1.5; margin: 0;">Diagnóstico rápido de falhas, conserto de vazamentos, troca de peças e revisão para garantir o bom funcionamento.</p>
             </div>
 
             <div class="card-hover" style="padding: 30px 20px; text-align: center;">
-                <div class="icon-badge">🧼</div>
+                <div class="icon-badge">
+                    <svg viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+                </div>
                 <h3 style="color: #0c4a6e; margin: 0 0 10px 0; font-size: 1.25rem;">Higienização Profunda</h3>
                 <p style="color: #475569; font-size: 0.95rem; line-height: 1.5; margin: 0;">Limpeza completa com produtos antibacterianos para eliminação de fungos, mofo e mau cheiro, melhorando o ar.</p>
             </div>
 
             <div class="card-hover" style="padding: 30px 20px; text-align: center;">
-                <div class="icon-badge">🌡️</div>
+                <div class="icon-badge">
+                    <svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+                </div>
                 <h3 style="color: #0c4a6e; margin: 0 0 10px 0; font-size: 1.25rem;">Carga de Gás</h3>
                 <p style="color: #475569; font-size: 0.95rem; line-height: 1.5; margin: 0;">Verificação da pressão do sistema e recarga de fluido refrigerante para devolver a capacidade máxima de refrigeração.</p>
             </div>
@@ -292,16 +329,16 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; text-align: center;">
             <div class="region-tag">
-                📍 Barra da Tijuca
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Barra da Tijuca
             </div>
             <div class="region-tag">
-                📍 Jacarepaguá
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Jacarepaguá
             </div>
             <div class="region-tag">
-                📍 Recreio dos Bandeirantes
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Recreio dos Bandeirantes
             </div>
             <div class="region-tag">
-                📍 Guaratiba
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Guaratiba
             </div>
         </div>
     </section>
