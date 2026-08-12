@@ -1,4 +1,4 @@
-A<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -40,31 +40,37 @@ A<!DOCTYPE html>
             line-height: 1.6;
         }
 
-        /* Cabeçalho Futurista com Brilho */
+        /* Cabeçalho Futurista com Brilho de Ponta a Ponta */
         header {
-            width: 100%;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
             background: rgba(3, 7, 18, 0.8);
             backdrop-filter: blur(12px);
-            padding: 0;
+            padding: 0 !important;
             border-bottom: 1px solid var(--card-border);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             position: relative;
+            overflow: hidden;
         }
 
         header::after {
             content: '';
             position: absolute;
             bottom: -1px;
-            left: 20%;
-            right: 20%;
+            left: 0;
+            right: 0;
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
         }
 
         header img {
-            width: 100%;
-            height: auto;
-            display: block;
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            min-height: initial !important;
+            max-height: none !important;
+            display: block !important;
+            object-fit: cover;
             filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4));
         }
 
@@ -259,8 +265,8 @@ A<!DOCTYPE html>
 <body>
 
     <!-- Cabeçalho -->
-    <header>
-        <img src="logo-composta.png" alt="Tec Carioca Refrigeração">
+    <header style="padding: 0; min-height: auto;">
+        <img src="logo-composta.png" alt="Tec Carioca Refrigeração" style="width: 100% !important; max-width: 100% !important; height: auto !important; display: block !important;">
     </header>
 
     <!-- Chamada Principal e CTA -->
@@ -381,7 +387,8 @@ A<!DOCTYPE html>
                 <p>Aceitamos Pix, cartões de débito e cartões de crédito com possibilidade de parcelamento facilitado.</p>
             </details>
             <details>
-                <summary>Quais marcas e modelos são atendidos?</summary> <p>Oferecemos suporte técnico para todas as principais fabricantes do mercado: LG, Samsung, Midea, Consul, Elgin, Gree, Fujitsu, Carrier, entre outras.</p>
+                <summary>Quais marcas e modelos são atendidos?</summary>
+                <p>Oferecemos suporte técnico para todas as principais fabricantes do mercado: LG, Samsung, Midea, Consul, Elgin, Gree, Fujitsu, Carrier, entre outras.</p>
             </details>
         </div>
     </section>
