@@ -64,12 +64,12 @@
             background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
         }
 
-        /* Logo configurada em 20% de proporção */
+        /* Ajuste de largura mantendo a altura ideal */
         header img {
-            width: 20% !important;
-            max-width: 20% !important;
+            width: auto !important;
+            max-width: 300px !important;
             height: auto !important;
-            max-height: none !important;
+            max-height: 160px !important;
             object-fit: contain !important;
             display: block !important;
             filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4));
@@ -265,8 +265,7 @@
         /* Responsividade para celulares */
         @media (max-width: 768px) {
             header img {
-                width: 45% !important;
-                max-width: 45% !important;
+                max-width: 80% !important;
             }
         }
     </style>
