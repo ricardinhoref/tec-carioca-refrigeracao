@@ -40,12 +40,12 @@
             line-height: 1.6;
         }
 
-        /* Cabeçalho Futurista - Esticado para as laterais */
+        /* Cabeçalho Futurista */
         header {
             width: 100%;
             background: rgba(3, 7, 18, 0.8);
             backdrop-filter: blur(12px);
-            padding: 10px 20px !important;
+            padding: 20px 0 !important;
             border-bottom: 1px solid var(--card-border);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             position: relative;
@@ -64,10 +64,13 @@
             background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
         }
 
+        /* Logo configurada em 1200x800 px max com adaptação responsiva */
         header img {
-            width: 85% !important;
-            max-width: 900px !important;
+            width: 100% !important;
+            max-width: 1200px !important;
             height: auto !important;
+            max-height: 800px !important;
+            object-fit: contain !important;
             display: block !important;
             filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4));
         }
@@ -262,7 +265,8 @@
         /* Responsividade para celulares */
         @media (max-width: 768px) {
             header img {
-                width: 95% !important;
+                max-width: 100% !important;
+                max-height: auto !important;
             }
         }
     </style>
@@ -271,7 +275,7 @@
 
     <!-- Cabeçalho -->
     <header>
-        <img src="logo-composta.png" alt="Tec Carioca Refrigeração">
+        <img src="logo-composta.png" width="1200" height="800" alt="Tec Carioca Refrigeração">
     </header>
 
     <!-- Chamada Principal e CTA -->
