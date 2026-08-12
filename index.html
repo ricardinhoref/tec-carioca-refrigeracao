@@ -40,12 +40,12 @@
             line-height: 1.6;
         }
 
-        /* Cabeçalho ocupando toda a largura */
+        /* Cabeçalho */
         header {
             width: 100%;
             background: rgba(3, 7, 18, 0.8);
             backdrop-filter: blur(12px);
-            padding: 0 !important;
+            padding: 15px 0 !important;
             border-bottom: 1px solid var(--card-border);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             position: relative;
@@ -64,13 +64,13 @@
             background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
         }
 
-        /* Logo esticada em toda a extensão horizontal */
+        /* Logo configurada para 50% de extensão horizontal */
         header img {
-            width: 100% !important;
-            max-width: 100% !important;
+            width: 50% !important;
+            max-width: 50% !important;
             height: auto !important;
             display: block !important;
-            object-fit: cover !important;
+            object-fit: contain !important;
             filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4));
         }
 
@@ -261,10 +261,11 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* Responsividade para telas menores */
         @media (max-width: 768px) {
             header img {
-                width: 100% !important;
-                max-width: 100% !important;
+                width: 80% !important;
+                max-width: 80% !important;
             }
         }
     </style>
