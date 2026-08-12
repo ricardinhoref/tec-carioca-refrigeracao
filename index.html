@@ -64,12 +64,12 @@
             background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
         }
 
-        /* Logo configurada em 1200x800 px max com adaptação responsiva */
+        /* Logo configurada em 20% de proporção */
         header img {
-            width: 100% !important;
-            max-width: 1200px !important;
+            width: 20% !important;
+            max-width: 20% !important;
             height: auto !important;
-            max-height: 800px !important;
+            max-height: none !important;
             object-fit: contain !important;
             display: block !important;
             filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4));
@@ -265,8 +265,8 @@
         /* Responsividade para celulares */
         @media (max-width: 768px) {
             header img {
-                max-width: 100% !important;
-                max-height: auto !important;
+                width: 45% !important;
+                max-width: 45% !important;
             }
         }
     </style>
@@ -275,7 +275,7 @@
 
     <!-- Cabeçalho -->
     <header>
-        <img src="logo-composta.png" width="1200" height="800" alt="Tec Carioca Refrigeração">
+        <img src="logo-composta.png" alt="Tec Carioca Refrigeração">
     </header>
 
     <!-- Chamada Principal e CTA -->
